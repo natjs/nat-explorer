@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.w3.org/ns/widgets"
+    id="nat-geolocation"
+    version="0.1.4">
+    <name>nat-geolocation</name>
+    <description>Nat.js module: Geolocation</description>
+    <license>MIT</license>
+    <keywords>weex,plugin,nat,natjs,geo,location,geolocation</keywords>
+    <repo>https://github.com/natjs/weex-nat-geolocation.git</repo>
+    <issue>https://github.com/natjs/weex-nat-geolocation/issues</issue>
+    
+     <!-- ios -->
+     <platform name="ios">
+         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription"></config-file>
+         
+         <config-file target="WeexpluginConfig.xml" parent="/*">
+             <feature name="WeexNatGeo">
+                 <param name="category" value="module" />
+                 <param name="ios-package" value="WeexNatGeo" />
+                 <param name="api" value="nat/geolocation" />
+             </feature>
+         </config-file>
+         
+         <header-file src="ios/WeexNatGeo.h"/>
+         <source-file src="ios/WeexNatGeo.m"/>
+
+         <framework src="Foundation.framework" />
+         <framework src="CoreLocation.framework" />
+         <framework src="NatGeolocation" type="podspec" spec="0.0.6" />
+     </platform>
+
+     <!-- android -->
+     <platform name="android">
+         <config-file target="config.xml" parent="/*">
+             <feature name="Geolocation">
+                 <param name="category" value="module" />
+                 <param name="android-package" value="com.nat.weex.Geolocation" />
+                 <param name="api" value="nat/geolocation" />
+             </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+             <uses-permission android:name="android.permission.INTERNET" />
+             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+             <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        </config-file>
+
+        <source-file src="android/Geolocation.java" target-dir="src/com/instapp/nat/geolocation" />
+
+        <framework src="com.nat:geolocation:1.0.3" />
+        <framework src="com.nat:permission:1.0.2" />
+     </platform>
+
+</plugin>

@@ -1,0 +1,5 @@
+{
+    "UIKit.framework": 1,
+    "Foundation.framework": 1,
+    "CoreLocation.framework": 1
+}

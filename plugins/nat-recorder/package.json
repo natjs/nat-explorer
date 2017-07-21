@@ -1,0 +1,19 @@
+{
+    "version": "0.1.3",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "description": "Nat.js module: Recorder (record audio)",
+    "keywords": [
+        "weex",
+        "plugin",
+        "nat",
+        "natjs",
+        "recorder",
+        "record",
+        "audio"
+    ],
+    "license": "MIT",
+    "name": "nat-recorder"
+}

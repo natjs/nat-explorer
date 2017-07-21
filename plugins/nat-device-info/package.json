@@ -1,0 +1,17 @@
+{
+    "version": "0.1.4",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "description": "Nat.js module: Device Info",
+    "keywords": [
+        "weex",
+        "plugin",
+        "nat",
+        "natjs",
+        "device"
+    ],
+    "license": "MIT",
+    "name": "nat-device-info"
+}

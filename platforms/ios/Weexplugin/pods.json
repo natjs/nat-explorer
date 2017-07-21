@@ -1,0 +1,110 @@
+{
+    "NatCamera": {
+        "name": "NatCamera",
+        "type": "podspec",
+        "spec": "0.0.2",
+        "count": 1
+    },
+    "NatCommunication": {
+        "name": "NatCommunication",
+        "type": "podspec",
+        "spec": "0.0.1",
+        "count": 1
+    },
+    "NatBattery": {
+        "name": "NatBattery",
+        "type": "podspec",
+        "spec": "0.0.2",
+        "count": 1
+    },
+    "NatDeviceInfo": {
+        "name": "NatDeviceInfo",
+        "type": "podspec",
+        "spec": "0.0.2",
+        "count": 1
+    },
+    "NatDeviceNetwork": {
+        "name": "NatDeviceNetwork",
+        "type": "podspec",
+        "spec": "0.0.2",
+        "count": 1
+    },
+    "NatScreen": {
+        "name": "NatScreen",
+        "type": "podspec",
+        "spec": "0.0.1",
+        "count": 1
+    },
+    "NatVibration": {
+        "name": "NatVibration",
+        "type": "podspec",
+        "spec": "0.0.1",
+        "count": 1
+    },
+    "NatVolume": {
+        "name": "NatVolume",
+        "type": "podspec",
+        "spec": "0.0.2",
+        "count": 1
+    },
+    "NatGeolocation": {
+        "name": "NatGeolocation",
+        "type": "podspec",
+        "spec": "0.0.6",
+        "count": 1
+    },
+    "NatAudio": {
+        "name": "NatAudio",
+        "type": "podspec",
+        "spec": "0.0.3",
+        "count": 1
+    },
+    "NatImage": {
+        "name": "NatImage",
+        "type": "podspec",
+        "spec": "0.0.7",
+        "count": 1
+    },
+    "NatVideo": {
+        "name": "NatVideo",
+        "type": "podspec",
+        "spec": "0.0.3",
+        "count": 1
+    },
+    "NatModal": {
+        "name": "NatModal",
+        "type": "podspec",
+        "spec": "0.0.1",
+        "count": 1
+    },
+    "NatRecorder": {
+        "name": "NatRecorder",
+        "type": "podspec",
+        "spec": "0.0.2",
+        "count": 1
+    },
+    "NatAccelerometer": {
+        "name": "NatAccelerometer",
+        "type": "podspec",
+        "spec": "0.0.2",
+        "count": 1
+    },
+    "NatCompass": {
+        "name": "NatCompass",
+        "type": "podspec",
+        "spec": "0.0.1",
+        "count": 1
+    },
+    "NatStream": {
+        "name": "NatStream",
+        "type": "podspec",
+        "spec": "0.0.1",
+        "count": 1
+    },
+    "NatTransfer": {
+        "name": "NatTransfer",
+        "type": "podspec",
+        "spec": "0.0.3",
+        "count": 1
+    }
+}

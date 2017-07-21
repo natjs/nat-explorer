@@ -1,0 +1,20 @@
+{
+    "version": "0.1.7",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "description": "Nat.js module: Communication (call phone, send short message, send email)",
+    "keywords": [
+        "weex",
+        "plugin",
+        "nat",
+        "natjs",
+        "communication",
+        "call",
+        "sms",
+        "email"
+    ],
+    "license": "MIT",
+    "name": "nat-communication"
+}

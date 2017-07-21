@@ -1,0 +1,19 @@
+{
+    "version": "0.1.4",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "description": "Nat.js module: Geolocation",
+    "keywords": [
+        "weex",
+        "plugin",
+        "nat",
+        "natjs",
+        "geo",
+        "location",
+        "geolocation"
+    ],
+    "license": "MIT",
+    "name": "nat-geolocation"
+}

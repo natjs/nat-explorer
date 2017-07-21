@@ -1,0 +1,19 @@
+{
+  "name": "weex-nat-device-vibration",
+  "version": "0.0.1",
+  "description": "Nat.js module: Vibration",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Nat",
+    "device",
+    "Vibration",
+    "Weex",
+    "Plugin",
+    "module",
+    "handle"
+  ],
+  "author": "Acathur",
+  "license": "MIT"
+}

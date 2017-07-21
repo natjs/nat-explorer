@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.w3.org/ns/widgets"
+    id="nat-sensor-accelerometer"
+    version="0.1.5">
+    <name>nat-sensor-accelerometer</name>
+    <description>Nat.js module: Accelerometer</description>
+    <license>MIT</license>
+    <keywords>weex,plugin,nat,natjs,sensor,accelerometer</keywords>
+    <repo>https://github.com/natjs/weex-nat-sensor-accelerometer.git</repo>
+    <issue>https://github.com/natjs/weex-nat-sensor-accelerometer/issues</issue>
+    
+     <!-- ios -->
+     <platform name="ios">
+         <config-file target="WeexpluginConfig.xml" parent="/*">
+             <feature name="WeexNatAccelerometer">
+                 <param name="category" value="module" />
+                 <param name="ios-package" value="WeexNatAccelerometer" />
+                 <param name="api" value="nat/sensor/accelerometer" />
+             </feature>
+         </config-file>
+         
+         <header-file src="ios/WeexNatAccelerometer.h"/>
+         <source-file src="ios/WeexNatAccelerometer.m"/>
+         
+         <framework src="NatAccelerometer" type="podspec" spec="0.0.2" />
+     </platform>
+
+     <!-- android -->
+     <platform name="android">
+        <config-file target="config.xml" parent="/*">
+             <feature name="Accelerometer">
+                 <param name="category" value="module" />
+                 <param name="android-package" value="com.nat.weex.Accelerometer" />
+                 <param name="api" value="nat/sensor/accelerometer" />
+             </feature>
+        </config-file>
+
+        <source-file src="android/Accelerometer.java" target-dir="src/com/instapp/nat/sensor/accelerometer" />
+
+        <framework src="com.nat:sensor-accelerometer:1.0.5" />
+     </platform>
+
+</plugin>

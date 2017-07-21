@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.taobao.WeexDemo" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://*">
+    <name>WeexDemo</name>
+    <description>
+        A sample Weex application that responds to the deviceready event.
+    </description>
+    <author email=" " href="https://alibaba.github.io/weex/">
+        Weex Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="itms:*" />
+    <allow-intent href="itms-apps:*" />
+    <preference name="AllowInlineMediaPlayback" value="false" />
+    <preference name="BackupWebStorage" value="cloud" />
+    <preference name="DisallowOverscroll" value="false" />
+    <preference name="EnableViewportScale" value="false" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="SuppressesLongPressGesture" value="false" />
+    <preference name="Suppresses3DTouchGesture" value="false" />
+    <preference name="GapBetweenPages" value="0" />
+    <preference name="PageLength" value="0" />
+    <preference name="PaginationBreakingMode" value="page" />
+    <preference name="PaginationMode" value="unpaginated" />
+    <feature name="WeexNatCamera">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatCamera" />
+        <param name="api" value="nat/camera" />
+    </feature>
+    <feature name="WeexNatCommunication">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatCommunication" />
+        <param name="api" value="nat/communication" />
+    </feature>
+    <feature name="WeexNatBattery">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatBattery" />
+        <param name="api" value="nat/device/battery" />
+    </feature>
+    <feature name="WeexNatDeviceInfo">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatDeviceInfo" />
+        <param name="api" value="nat/device/info" />
+    </feature>
+    <feature name="WeexNatDeviceNetwork">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatDeviceNetwork" />
+        <param name="api" value="nat/device/network" />
+    </feature>
+    <feature name="WeexNatScreen">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatScreen" />
+        <param name="api" value="nat/device/screen" />
+    </feature>
+    <feature name="WeexNatVibration">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatVibration" />
+        <param name="api" value="nat/device/vibration" />
+    </feature>
+    <feature name="WeexNatVolume">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatVolume" />
+        <param name="api" value="nat/device/volume" />
+    </feature>
+    <feature name="WeexNatGeo">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatGeo" />
+        <param name="api" value="nat/geolocation" />
+    </feature>
+    <feature name="WeexNatAudio">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatAudio" />
+        <param name="api" value="nat/media/audio" />
+    </feature>
+    <feature name="WeexNatImage">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatImage" />
+        <param name="api" value="nat/media/image" />
+    </feature>
+    <feature name="WeexNatVideo">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatVideo" />
+        <param name="api" value="nat/media/video" />
+    </feature>
+    <feature name="WeexNatModal">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatModal" />
+        <param name="api" value="nat/modal" />
+    </feature>
+    <feature name="WeexNatRecorder">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatRecorder" />
+        <param name="api" value="nat/recorder" />
+    </feature>
+    <feature name="WeexNatAccelerometer">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatAccelerometer" />
+        <param name="api" value="nat/sensor/accelerometer" />
+    </feature>
+    <feature name="WeexNatCompass">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatCompass" />
+        <param name="api" value="nat/sensor/compass" />
+    </feature>
+    <feature name="WeexNatStream">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatStream" />
+        <param name="api" value="nat/stream" />
+    </feature>
+    <feature name="WeexNatTransfer">
+        <param name="category" value="module" />
+        <param name="ios-package" value="WeexNatTransfer" />
+        <param name="api" value="nat/transfer" />
+    </feature>
+</widget>

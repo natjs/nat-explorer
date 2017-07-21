@@ -1,0 +1,6 @@
+{
+  "AppName":"Nat Example",
+  "AppId":"com.instapp.natex",
+  "SplashText":"Nat",
+  "WeexBundle":"index.js"
+}

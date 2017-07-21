@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.w3.org/ns/widgets"
+    id="nat-device-info"
+    version="0.1.4">
+    <name>nat-device-info</name>
+    <description>Nat.js module: Device Info</description>
+    <license>MIT</license>
+    <keywords>weex,plugin,nat,natjs,device</keywords>
+    <repo>https://github.com/natjs/weex-nat-device-info.git</repo>
+    <issue>https://github.com/natjs/weex-nat-device-info/issues</issue>
+    
+     <!-- ios -->
+     <platform name="ios">
+         <config-file target="WeexpluginConfig.xml" parent="/*">
+            <feature name="WeexNatDeviceInfo">
+                <param name="category" value="module" />
+                <param name="ios-package" value="WeexNatDeviceInfo" />
+                <param name="api" value="nat/device/info" />
+            </feature>
+         </config-file>
+
+         <header-file src="ios/WeexNatDeviceInfo.h"/>
+         <source-file src="ios/WeexNatDeviceInfo.m"/>
+         
+         <framework src="NatDeviceInfo" type="podspec" spec="0.0.2" />
+     </platform>
+
+     <!-- android -->
+     <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="DeviceInfo">
+                <param name="category" value="module" />
+                <param name="android-package" value="com.nat.weex.DeviceInfo" />
+                <param name="api" value="nat/device/info" />
+            </feature>
+        </config-file>
+
+        <source-file src="android/DeviceInfo.java" target-dir="src/com/instapp/nat/device/info" />
+
+        <framework src="com.nat:device-info:1.0.3" />
+     </platform>
+
+</plugin>

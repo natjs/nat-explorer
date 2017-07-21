@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.w3.org/ns/widgets"
+    id="nat-device-network"
+    version="0.1.4">
+    <name>nat-device-network</name>
+    <description>Nat.js module: Device Network</description>
+    <license>Apache 2.0</license>
+    <keywords>weex,plugin,nat,natjs,device,network</keywords>
+    <repo>https://github.com/natjs/weex-nat-device-network.git</repo>
+    <issue>https://github.com/natjs/weex-nat-device-network/issues</issue>
+    
+     <!-- ios -->
+     <platform name="ios">
+         <config-file target="WeexpluginConfig.xml" parent="/*">
+            <feature name="WeexNatDeviceNetwork">
+                <param name="category" value="module" />
+                <param name="ios-package" value="WeexNatDeviceNetwork" />
+                <param name="api" value="nat/device/network" />
+            </feature>
+         </config-file>
+
+         <header-file src="ios/WeexNatDeviceNetwork.h"/>
+         <source-file src="ios/WeexNatDeviceNetwork.m"/>
+
+         <framework src="NatDeviceNetwork" type="podspec" spec="0.0.2" />
+     </platform>
+
+     <!-- android -->
+     <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Network">
+                <param name="category" value="module" />
+                <param name="android-package" value="com.nat.weex.Network" />
+                <param name="api" value="nat/device/network" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+             <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+
+        <source-file src="android/Network.java" target-dir="src/com/instapp/nat/device/network" />
+
+        <framework src="com.nat:device-network:1.0.4" />
+     </platform>
+
+</plugin>

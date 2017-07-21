@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.example.myapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets">
+    <name>Weex</name>
+    <description>
+        A sample Weex application.
+    </description>
+    <author email="" href="">
+        Weex Team
+    </author>
+    <feature name="communication">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.communication" />
+        <param name="api" value="nat/communication" />
+    </feature>
+    <feature name="NetworkInfo">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.NetworkInfo" />
+        <param name="api" value="nat/device/network" />
+    </feature>
+    <feature name="Camera">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Camera" />
+        <param name="api" value="nat/camera" />
+    </feature>
+    <feature name="Communication">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Communication" />
+        <param name="api" value="nat/communication" />
+    </feature>
+    <feature name="DeviceBattery">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.DeviceBattery" />
+        <param name="api" value="nat/device/battery" />
+    </feature>
+    <feature name="DeviceInfo">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.DeviceInfo" />
+        <param name="api" value="nat/device/info" />
+    </feature>
+    <feature name="Network">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Network" />
+        <param name="api" value="nat/device/network" />
+    </feature>
+    <feature name="DeviceScreen">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.DeviceScreen" />
+        <param name="api" value="nat/device/screen" />
+    </feature>
+    <feature name="DeviceVibration">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.DeviceVibration" />
+        <param name="api" value="nat/device/vibration" />
+    </feature>
+    <feature name="DeviceVolume">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.DeviceVolume" />
+        <param name="api" value="nat/device/volume" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Geolocation" />
+        <param name="api" value="nat/geolocation" />
+    </feature>
+    <feature name="Audio">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Audio" />
+        <param name="api" value="nat/media/audio" />
+    </feature>
+    <feature name="Image">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Image" />
+        <param name="api" value="nat/media/image" />
+    </feature>
+    <feature name="Video">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Video" />
+        <param name="api" value="nat/media/video" />
+    </feature>
+    <feature name="Modal">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Modal" />
+        <param name="api" value="nat/modal" />
+    </feature>
+    <feature name="Recorder">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Recorder" />
+        <param name="api" value="nat/recorder" />
+    </feature>
+    <feature name="Accelerometer">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Accelerometer" />
+        <param name="api" value="nat/sensor/accelerometer" />
+    </feature>
+    <feature name="Compass">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Compass" />
+        <param name="api" value="nat/sensor/compass" />
+    </feature>
+    <feature name="Stream">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Stream" />
+        <param name="api" value="nat/stream" />
+    </feature>
+    <feature name="Transfer">
+        <param name="category" value="module" />
+        <param name="android-package" value="com.nat.weex.Transfer" />
+        <param name="api" value="nat/transfer" />
+    </feature>
+</widget>

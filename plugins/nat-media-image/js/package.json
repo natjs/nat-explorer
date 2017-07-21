@@ -1,0 +1,23 @@
+{
+  "name": "weex-nat-media-image",
+  "version": "0.0.1",
+  "description": "Nat.js module: Image (pick Images from gallery, preview image list, get info or exif info from image)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Nat",
+    "media",
+    "pick",
+    "preview",
+    "info",
+    "exif",
+    "image",
+    "Weex",
+    "Plugin",
+    "module",
+    "handle"
+  ],
+  "author": "Acathur",
+  "license": "MIT"
+}

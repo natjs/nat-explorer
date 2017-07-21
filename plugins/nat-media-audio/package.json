@@ -1,0 +1,17 @@
+{
+    "version": "0.1.5",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "description": "Nat.js module: Audio (play audio remote or local)",
+    "keywords": [
+        "weex",
+        "plugin",
+        "nat",
+        "natjs",
+        "audio"
+    ],
+    "license": "MIT",
+    "name": "nat-media-audio"
+}

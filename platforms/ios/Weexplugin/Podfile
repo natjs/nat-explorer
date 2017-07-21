@@ -1,0 +1,27 @@
+source 'git@github.com/CocoaPods/Specs.git'
+platform :ios, '7.0'
+# inhibit_all_warnings!
+def common
+		pod 'WeexSDK'
+	pod 'NatCamera', '0.0.2'
+	pod 'NatCommunication', '0.0.1'
+	pod 'NatBattery', '0.0.2'
+	pod 'NatDeviceInfo', '0.0.2'
+	pod 'NatDeviceNetwork', '0.0.2'
+	pod 'NatScreen', '0.0.1'
+	pod 'NatVibration', '0.0.1'
+	pod 'NatVolume', '0.0.2'
+	pod 'NatGeolocation', '0.0.6'
+	pod 'NatAudio', '0.0.3'
+	pod 'NatImage', '0.0.7'
+	pod 'NatVideo', '0.0.3'
+	pod 'NatModal', '0.0.1'
+	pod 'NatRecorder', '0.0.2'
+	pod 'NatAccelerometer', '0.0.2'
+	pod 'NatCompass', '0.0.1'
+	pod 'NatStream', '0.0.1'
+	pod 'NatTransfer', '0.0.3'
+end
+target 'Weexplugin' do
+	common
+end

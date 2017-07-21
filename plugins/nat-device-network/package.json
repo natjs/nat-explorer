@@ -1,0 +1,18 @@
+{
+    "version": "0.1.4",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "description": "Nat.js module: Device Network",
+    "keywords": [
+        "weex",
+        "plugin",
+        "nat",
+        "natjs",
+        "device",
+        "network"
+    ],
+    "license": "Apache 2.0",
+    "name": "nat-device-network"
+}

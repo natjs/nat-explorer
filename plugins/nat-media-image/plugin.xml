@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.w3.org/ns/widgets"
+    id="nat-media-image"
+    version="0.2.1">
+    <name>nat-media-image</name>
+    <description>Nat.js module: Image (pick Images from gallery, preview image list, get info or exif info from image)</description>
+    <license>MIT</license>
+    <keywords>weex,plugin,nat,natjs,image</keywords>
+    <repo>https://github.com/natjs/weex-nat-media-image.git</repo>
+    <issue>https://github.com/natjs/weex-nat-media-image/issues</issue>
+    
+     <!-- ios -->
+     <platform name="ios">
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription"></config-file>
+
+        <config-file target="WeexpluginConfig.xml" parent="/*">
+            <feature name="WeexNatImage">
+                <param name="category" value="module" />
+                <param name="ios-package" value="WeexNatImage" />
+                <param name="api" value="nat/media/image" />
+            </feature>
+        </config-file>
+
+        <header-file src="ios/WeexNatImage.h"/>
+        <source-file src="ios/WeexNatImage.m"/>
+
+        <framework src="NatImage" type="podspec" spec="0.0.7" />
+     </platform>
+
+     <!-- android -->
+     <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Image">
+                <param name="category" value="module" />
+                <param name="android-package" value="com.nat.weex.Image" />
+                <param name="api" value="nat/media/image" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <source-file src="android/Image.java" target-dir="src/com/instapp/nat/media/image" />
+
+        <framework src="com.nat:media-image:1.1.1" />
+        <framework src="com.nat:permission:1.0.2" />
+     </platform>
+
+</plugin>

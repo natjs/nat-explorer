@@ -1,0 +1,20 @@
+{
+    "version": "0.1.4",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "description": "Nat.js module: Network File Transfer (download & upload)",
+    "keywords": [
+        "weex",
+        "plugin",
+        "nat",
+        "natjs",
+        "network",
+        "transfer",
+        "upload",
+        "download"
+    ],
+    "license": "MIT",
+    "name": "nat-transfer"
+}

@@ -1,0 +1,17 @@
+{
+    "version": "0.2.3",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "description": "Nat.js module: Video (play video remote or local)",
+    "keywords": [
+        "weex",
+        "plugin",
+        "nat",
+        "natjs",
+        "video"
+    ],
+    "license": "MIT",
+    "name": "nat-media-video"
+}

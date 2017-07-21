@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.w3.org/ns/widgets"
+    id="nat-sensor-compass"
+    version="0.1.4">
+    <name>nat-sensor-compass</name>
+    <description>Nat.js module: Compass</description>
+    <license>MIT</license>
+    <keywords>weex,plugin,nat,natjs,sensor,compass</keywords>
+    <repo>https://github.com/natjs/weex-nat-sensor-compass.git</repo>
+    <issue>https://github.com/natjs/weex-nat-sensor-compass/issues</issue>
+    
+     <!-- ios -->
+     <platform name="ios">
+         <config-file target="WeexpluginConfig.xml" parent="/*">
+             <feature name="WeexNatCompass">
+                 <param name="category" value="module" />
+                 <param name="ios-package" value="WeexNatCompass" />
+                 <param name="api" value="nat/sensor/compass" />
+             </feature>
+         </config-file>
+         
+         <header-file src="ios/WeexNatCompass.h"/>
+         <source-file src="ios/WeexNatCompass.m"/>
+         
+         <framework src="NatCompass" type="podspec" spec="0.0.1" />
+     </platform>
+
+     <!-- android -->
+     <platform name="android">
+        <config-file target="config.xml" parent="/*">
+             <feature name="Compass">
+                 <param name="category" value="module" />
+                 <param name="android-package" value="com.nat.weex.Compass" />
+                 <param name="api" value="nat/sensor/compass" />
+             </feature>
+        </config-file>
+
+        <source-file src="android/Compass.java" target-dir="src/com/instapp/nat/sensor/compass" />
+
+        <framework src="com.nat:sensor-compass:1.0.4" />
+     </platform>
+
+</plugin>

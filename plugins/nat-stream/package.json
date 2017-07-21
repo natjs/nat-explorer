@@ -1,0 +1,19 @@
+{
+    "version": "0.1.4",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "description": "Nat.js module: Stream (fetch)",
+    "keywords": [
+        "weex",
+        "plugin",
+        "nat",
+        "natjs",
+        "network",
+        "stream",
+        "fetch"
+    ],
+    "license": "MIT",
+    "name": "nat-stream"
+}

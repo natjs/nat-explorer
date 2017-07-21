@@ -1,0 +1,19 @@
+{
+  "name": "weex-nat-sensor-accelerometer",
+  "version": "0.0.1",
+  "description": "Nat.js module: Accelerometer",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Nat",
+    "sensor",
+    "accelerometer",
+    "Weex",
+    "Plugin",
+    "module",
+    "handle"
+  ],
+  "author": "Acathur",
+  "license": "MIT"
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.w3.org/ns/widgets"
+    id="nat-transfer"
+    version="0.1.4">
+    <name>nat-transfer</name>
+    <description>Nat.js module: Network File Transfer (download & upload)</description>
+    <license>MIT</license>
+    <keywords>weex,plugin,nat,natjs,network,transfer,upload,download</keywords>
+    <repo>https://github.com/natjs/weex-nat-transfer.git</repo>
+    <issue>https://github.com/natjs/weex-nat-transfer/issues</issue>
+    
+     <!-- ios -->
+     <platform name="ios">
+         <config-file target="WeexpluginConfig.xml" parent="/*">
+             <feature name="WeexNatTransfer">
+                 <param name="category" value="module" />
+                 <param name="ios-package" value="WeexNatTransfer" />
+                 <param name="api" value="nat/transfer" />
+             </feature>
+         </config-file>
+
+         <header-file src="ios/WeexNatTransfer.h"/>
+         <source-file src="ios/WeexNatTransfer.m"/>
+         
+         <framework src="NatTransfer" type="podspec" spec="0.0.3" />
+     </platform>
+
+     <!-- android -->
+     <platform name="android">
+        <config-file target="config.xml" parent="/*">
+             <feature name="Transfer">
+                 <param name="category" value="module" />
+                 <param name="android-package" value="com.nat.weex.Transfer" />
+                 <param name="api" value="nat/transfer" />
+             </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+             <uses-permission android:name="android.permission.INTERNET" />
+             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+             <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <source-file src="android/Transfer.java" target-dir="src/com/instapp/nat/transfer" />
+
+        <framework src="com.nat:transfer:1.0.4" />
+     </platform>
+
+</plugin>

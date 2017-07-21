@@ -1,0 +1,18 @@
+{
+    "version": "0.1.4",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "description": "Nat.js module: Battery",
+    "keywords": [
+        "weex",
+        "plugin",
+        "nat",
+        "natjs",
+        "device",
+        "battery"
+    ],
+    "license": "MIT",
+    "name": "nat-device-battery"
+}

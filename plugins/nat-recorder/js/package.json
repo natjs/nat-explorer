@@ -1,0 +1,20 @@
+{
+  "name": "weex-nat-recorder",
+  "version": "0.0.1",
+  "description": "Nat.js module: Recorder (record audio)",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Nat",
+    "recorder",
+    "record",
+    "audio",
+    "Weex",
+    "Plugin",
+    "module",
+    "handle"
+  ],
+  "author": "Acathur",
+  "license": "MIT"
+}

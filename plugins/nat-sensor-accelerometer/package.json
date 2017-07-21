@@ -1,0 +1,18 @@
+{
+    "version": "0.1.5",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "description": "Nat.js module: Accelerometer",
+    "keywords": [
+        "weex",
+        "plugin",
+        "nat",
+        "natjs",
+        "sensor",
+        "accelerometer"
+    ],
+    "license": "MIT",
+    "name": "nat-sensor-accelerometer"
+}

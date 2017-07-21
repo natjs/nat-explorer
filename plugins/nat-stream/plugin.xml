@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.w3.org/ns/widgets"
+    id="nat-stream"
+    version="0.1.4">
+    <name>nat-stream</name>
+    <description>Nat.js module: Stream (fetch)</description>
+    <license>MIT</license>
+    <keywords>weex,plugin,nat,natjs,network,stream,fetch</keywords>
+    <repo>https://github.com/natjs/weex-nat-stream.git</repo>
+    <issue>https://github.com/natjs/weex-nat-stream/issues</issue>
+    
+     <!-- ios -->
+     <platform name="ios">
+         <config-file target="WeexpluginConfig.xml" parent="/*">
+             <feature name="WeexNatStream">
+                 <param name="category" value="module" />
+                 <param name="ios-package" value="WeexNatStream" />
+                 <param name="api" value="nat/stream" />
+             </feature>
+         </config-file>
+
+         <header-file src="ios/WeexNatStream.h"/>
+         <source-file src="ios/WeexNatStream.m"/>
+         
+         <framework src="NatStream" type="podspec" spec="0.0.1" />
+     </platform>
+
+     <!-- android -->
+     <platform name="android">
+        <config-file target="config.xml" parent="/*">
+             <feature name="Stream">
+                 <param name="category" value="module" />
+                 <param name="android-package" value="com.nat.weex.Stream" />
+                 <param name="api" value="nat/stream" />
+             </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+             <uses-permission android:name="android.permission.INTERNET" />
+             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+             <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        </config-file>
+
+        <source-file src="android/Stream.java" target-dir="src/com/instapp/nat/stream" />
+
+        <framework src="com.nat:stream:1.0.3" />
+     </platform>
+
+</plugin>
