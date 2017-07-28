@@ -89,6 +89,7 @@
 		983B223F3951480F8D2048E3 /* CoreLocation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B116DBF2254E48A0816816AE /* ImageIO.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		BECB15C78BC5454C86CFBC04 /* AVFoundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D507219F1F2AE335001DB173 /* ApiKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiKey.h; sourceTree = "<group>"; };
 		DC5E503C1D0D97130059F0EB /* weex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = weex.png; sourceTree = "<group>"; };
 		DC5E503D1D0D97130059F0EB /* weex@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weex@2x.png"; sourceTree = "<group>"; };
 		DC65C4F91CEB032F00B2F84F /* bundlejs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bundlejs; sourceTree = "<group>"; };
@@ -253,6 +254,7 @@
 				775BEE811C1E8ECC008D1629 /* AppDelegate.h */,
 				775BEE821C1E8ECC008D1629 /* AppDelegate.m */,
 				7453E3641C9FA971001EB427 /* DemoDefine.h */,
+				D507219F1F2AE335001DB173 /* ApiKey.h */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -728,6 +730,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Hooli Technologies, Inc. (Y85P4Q4QQ2)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Hooli Technologies, Inc. (Y85P4Q4QQ2)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hooli Technologies, Inc. (Y85P4Q4QQ2)";
 				DEVELOPMENT_TEAM = Y85P4Q4QQ2;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (

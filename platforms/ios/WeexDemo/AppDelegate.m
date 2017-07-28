@@ -8,10 +8,12 @@
 
 #import "AppDelegate.h"
 #import "DemoDefine.h"
+#import "ApiKey.h"
 #import <WeexSDK/WeexSDK.h>
 #import <AVFoundation/AVFoundation.h>
 #import <ATSDK/ATManager.h>
 #import "WeexSDKManager.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 @interface AppDelegate ()
 @end
@@ -27,6 +29,11 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     [WeexSDKManager setup];
+    
+    // leancloud
+    [AVOSCloud setServiceRegion:AVServiceRegionUS];
+    [AVOSCloud setApplicationId:LC_APPID clientKey:LC_APPKEY];
+    [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     [self.window makeKeyAndVisible];
     

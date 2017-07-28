@@ -1,5 +1,6 @@
 PODS:
   - ATSDK (0.0.1)
+  - AVOSCloud (6.1.1)
   - DACircularProgress (2.3.1)
   - MBProgressHUD (1.0.0)
   - NatAccelerometer (0.0.2)
@@ -59,6 +60,7 @@ PODS:
 
 DEPENDENCIES:
   - ATSDK (= 0.0.1)
+  - AVOSCloud
   - SDWebImage (= 3.7.6)
   - SocketRocket (= 0.4.2)
   - Weexplugin (from `./Weexplugin/`)
@@ -71,6 +73,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ATSDK: 1df570b25312c98fedfb35696050851bccc0fdd3
+  AVOSCloud: a21318994cd97adaf9bf19cf0ac38187b3d94f00
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   NatAccelerometer: 4cdd2deda166c2e0f4bc768e9dad5bfd01ca4a9c
@@ -99,6 +102,6 @@ SPEC CHECKSUMS:
   WeexSDK: 4651f0314ea6d77d771d587a3fcb38cdab9750f5
   WXDevtool: 5135a5c6f4426fb635babb9eacfa14352bc66dc6
 
-PODFILE CHECKSUM: 94cad9dce81ddbdb39f64b0e073b2b62cbad4d2b
+PODFILE CHECKSUM: b1d7f3cedc14c05a58017d06c346e239b2e6542d
 
 COCOAPODS: 1.2.0

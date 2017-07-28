@@ -9,6 +9,7 @@ def common
     pod 'SDWebImage', '3.7.6'
     pod 'SocketRocket', '0.4.2'
     pod 'ATSDK', '0.0.1'
+    pod 'AVOSCloud'
 end
 
 target 'WeexDemo' do
