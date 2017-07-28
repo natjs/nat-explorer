@@ -32,7 +32,6 @@ public class WXApplication extends Application {
 
 		AVOSCloud.useAVCloudUS();
 		AVOSCloud.initialize(this, ApiKey.LC_APPID, ApiKey.LC_APPKEY);
-		AVOSCloud.setDebugLogEnabled(true);
 		AVAnalytics.enableCrashReport(this, true);
 
 		try {
