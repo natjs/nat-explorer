@@ -1,11 +1,6 @@
 package com.instapp.natex;
 
-import android.app.ActivityManager;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.hardware.SensorManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -16,15 +11,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.instapp.natex.commons.AbsWeexActivity;
-import com.instapp.natex.commons.util.CommonUtils;
-import com.instapp.natex.commons.util.DevOptionHandler;
-import com.instapp.natex.commons.util.ShakeDetector;
 import com.instapp.natex.constants.Constants;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
@@ -35,8 +26,6 @@ import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.ui.component.NestedContainer;
 import com.taobao.weex.utils.WXSoInstallMgrSdk;
 
-import java.util.LinkedHashMap;
-
 
 public class WXPageActivity extends AbsWeexActivity implements
     WXSDKInstance.NestedInstanceInterceptor {
@@ -44,11 +33,6 @@ public class WXPageActivity extends AbsWeexActivity implements
   private static final String TAG = "WXPageActivity";
   private ProgressBar mProgressBar;
   private TextView mTipView;
-  private AlertDialog mDevOptionsDialog;
-  private boolean mIsShakeDetectorStarted = false;
-  private boolean mIsDevSupportEnabled = WXEnvironment.isApkDebugable();
-  private final LinkedHashMap<String, DevOptionHandler> mCustomDevOptions = new LinkedHashMap<>();
-  private ShakeDetector mShakeDetector;
 
   @Override
   public void onCreateNestInstance(WXSDKInstance instance, NestedContainer container) {
@@ -62,16 +46,6 @@ public class WXPageActivity extends AbsWeexActivity implements
     mContainer = (ViewGroup) findViewById(R.id.container);
     mProgressBar = (ProgressBar) findViewById(R.id.progress);
     mTipView = (TextView) findViewById(R.id.index_tip);
-
-    if (mIsDevSupportEnabled && !CommonUtils.hasHardwareMenuKey()) {
-      mShakeDetector = new ShakeDetector(new ShakeDetector.ShakeListener() {
-
-        @Override
-        public void onShake() {
-          showDevOptionsDialog();
-        }
-      });
-    }
 
     Uri uri = getIntent().getData();
     Bundle bundle = getIntent().getExtras();
@@ -106,19 +80,11 @@ public class WXPageActivity extends AbsWeexActivity implements
   @Override
   public void onResume() {
     super.onResume();
-    if (!mIsShakeDetectorStarted && mShakeDetector != null) {
-      mShakeDetector.start((SensorManager) getApplicationContext().getSystemService(Context.SENSOR_SERVICE));
-      mIsShakeDetectorStarted = true;
-    }
   }
 
   @Override
   public void onPause() {
     super.onPause();
-    if (mIsShakeDetectorStarted && mShakeDetector != null) {
-      mShakeDetector.stop();
-      mIsShakeDetectorStarted = false;
-    }
   }
 
   private String getUrl(Uri uri) {
@@ -249,72 +215,5 @@ public class WXPageActivity extends AbsWeexActivity implements
   @Override
   public void onDestroy() {
     super.onDestroy();
-    if (mShakeDetector != null) {
-      mShakeDetector.stop();
-    }
-  }
-
-  public void showDevOptionsDialog() {
-    if (mDevOptionsDialog != null || !mIsDevSupportEnabled || ActivityManager.isUserAMonkey()) {
-      return;
-    }
-    LinkedHashMap<String, DevOptionHandler> options = new LinkedHashMap<>();
-    /* register standard options */
-    options.put(
-        getString(R.string.scan_qr_code), new DevOptionHandler() {
-          @Override
-          public void onOptionSelected() {
-            IntentIntegrator integrator = new IntentIntegrator(WXPageActivity.this);
-            integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
-            integrator.setPrompt("Scan a barcode");
-            //integrator.setCameraId(0);  // Use a specific camera of the device
-            integrator.setBeepEnabled(true);
-            integrator.setOrientationLocked(false);
-            integrator.setBarcodeImageEnabled(true);
-            integrator.setPrompt(getString(R.string.capture_qrcode_prompt));
-            integrator.initiateScan();
-          }
-        });
-    options.put(
-        getString(R.string.page_refresh), new DevOptionHandler() {
-          @Override
-          public void onOptionSelected() {
-            createWeexInstance();
-            renderPage();
-          }
-        });
-
-    if (mCustomDevOptions.size() > 0) {
-      options.putAll(mCustomDevOptions);
-    }
-
-    final DevOptionHandler[] optionHandlers = options.values().toArray(new DevOptionHandler[0]);
-
-    mDevOptionsDialog =
-        new AlertDialog.Builder(WXPageActivity.this)
-            .setItems(
-                options.keySet().toArray(new String[0]),
-                new DialogInterface.OnClickListener() {
-                  @Override
-                  public void onClick(DialogInterface dialog, int which) {
-                    optionHandlers[which].onOptionSelected();
-                    mDevOptionsDialog = null;
-                  }
-                })
-            .setOnCancelListener(new DialogInterface.OnCancelListener() {
-              @Override
-              public void onCancel(DialogInterface dialog) {
-                mDevOptionsDialog = null;
-              }
-            })
-            .create();
-    mDevOptionsDialog.getWindow().setType(WindowManager.LayoutParams.TYPE_SYSTEM_ALERT);
-    mDevOptionsDialog.show();
-  }
-
-  public void addCustomDevOption(
-      String optionName,
-      DevOptionHandler optionHandler) {
-    mCustomDevOptions.put(optionName, optionHandler);
   }
 }

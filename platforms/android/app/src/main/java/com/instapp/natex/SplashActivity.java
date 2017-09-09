@@ -34,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
 
       Uri uri = Uri.parse(builder.toString());
       intent.setData(uri);
-      intent.addCategory("com.taobao.android.intent.category.WEEX");
+      intent.addCategory("com.instapp.natex.android.intent.category.WEEX");
       intent.setPackage(getPackageName());
       startActivity(intent);
       finish();

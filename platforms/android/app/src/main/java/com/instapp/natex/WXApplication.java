@@ -2,10 +2,10 @@ package com.instapp.natex;
 
 import android.app.Application;
 
-import com.instapp.natex.ApiKey;
 import com.instapp.natex.commons.adapter.ImageAdapter;
 import com.instapp.natex.commons.util.AppConfig;
-import com.instapp.natex.extend.module.WXEventModule;
+import com.instapp.natex.extend.module.EventModule;
+import com.instapp.natex.extend.module.NavigatorModule;
 import com.instapp.natex.pluginmanager.PluginManager;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.taobao.weex.InitConfig;
@@ -35,7 +35,8 @@ public class WXApplication extends Application {
 		AVAnalytics.enableCrashReport(this, true);
 
 		try {
-			WXSDKEngine.registerModule("event", WXEventModule.class);
+			WXSDKEngine.registerModule("event", EventModule.class);
+			WXSDKEngine.registerModule("navigator", NavigatorModule.class);
 		} catch (WXException e) {
 			e.printStackTrace();
 		}
