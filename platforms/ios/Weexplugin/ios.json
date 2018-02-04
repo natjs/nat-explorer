@@ -166,6 +166,6 @@
         "nat-sensor-accelerometer": "0.1.5",
         "nat-sensor-compass": "0.1.4",
         "nat-stream": "0.1.4",
-        "nat-transfer": "0.1.4"
+        "nat-transfer": "0.1.6"
     }
 }

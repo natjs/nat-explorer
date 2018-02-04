@@ -104,7 +104,7 @@
     "NatTransfer": {
         "name": "NatTransfer",
         "type": "podspec",
-        "spec": "0.0.3",
+        "spec": "0.0.4",
         "count": 1
     }
 }

@@ -73,6 +73,7 @@ Pod::Spec.new do |s|
   s.dependency 'NatStream', '0.0.1'
   s.dependency 'NatTransfer', '0.0.3'
   s.dependency 'NatRecorder', '0.0.2'
+  s.dependency 'NatTransfer', '0.0.4'
   #${weexpackPlaceHolder}
 
   # s.vendored_frameworks = 'Weexplugin.framework'

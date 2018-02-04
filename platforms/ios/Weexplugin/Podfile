@@ -20,7 +20,7 @@ def common
 	pod 'NatAccelerometer', '0.0.2'
 	pod 'NatCompass', '0.0.1'
 	pod 'NatStream', '0.0.1'
-	pod 'NatTransfer', '0.0.3'
+	pod 'NatTransfer', '0.0.4'
 end
 target 'Weexplugin' do
 	common
