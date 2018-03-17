@@ -46,8 +46,8 @@ dependencies {
     compile 'com.nat:sensor-compass:1.0.4'
     compile 'com.nat:stream:1.0.3'
     compile 'com.nat:transfer:1.0.6'
-// PLUGIN GRADLE EXTENSIONS END
     compile 'com.nat:stream:1.0.3'
+// PLUGIN GRADLE EXTENSIONS END
 }
 
 repositories {
