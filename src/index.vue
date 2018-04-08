@@ -1,13 +1,13 @@
 <template lang="pug">
 	div
-		status-bar
+		status-bar(:show="false")
 		list(:show-scrollbar="false")
 			cell
 				image.logo(:src="cdnUri + 'logo.png'")
 				div.app-name
 					text.bold Nat
 					text.light Explorer
-			cell(v-for="item in modules")
+			cell(v-for="(item, i) in modules" :key="i")
 				module(:name="item.name", :functions="item.functions")
 
 </template>
@@ -39,7 +39,7 @@ export default {
 
 .logo {
 	width: 82px;
-	height: 84px;
+	height: 82px;
 	margin-top: 32px;
 	margin-left: 48px;
 	margin-bottom: 18px;
@@ -55,14 +55,14 @@ export default {
 }
 
 .bold {
-	.c-ink;
-	.fz-72;
+	color: @ink;
+	font-size: @font-size-xl;
 	font-weight: 700;
 }
 
 .light {
-	.c-ink;
-	.fz-72;
+	color: @ink;
+	font-size: @font-size-xl;
 	font-weight: 200;
 	margin-left: 24px;
 }

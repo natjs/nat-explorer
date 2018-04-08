@@ -1,15 +1,14 @@
 PODS:
-  - ATSDK (0.0.1)
-  - AVOSCloud (6.1.1)
+  - AVOSCloud (10.1.0)
   - DACircularProgress (2.3.1)
   - MBProgressHUD (1.0.0)
-  - NatAccelerometer (0.0.2)
+  - NatAccelerometer (0.0.3)
   - NatAudio (0.0.3)
   - NatBattery (0.0.2)
   - NatCamera (0.0.2)
-  - NatCommunication (0.0.1)
-  - NatCompass (0.0.1)
-  - NatDeviceInfo (0.0.2)
+  - NatCommunication (0.0.2)
+  - NatCompass (0.0.2)
+  - NatDeviceInfo (0.0.3)
   - NatDeviceNetwork (0.0.2):
     - Reachability (~> 3.2)
   - NatGeolocation (0.0.6)
@@ -22,67 +21,129 @@ PODS:
   - NatRecorder (0.0.2)
   - NatScreen (0.0.1)
   - NatStream (0.0.1)
-  - NatTransfer (0.0.3)
+  - NatTransfer (0.0.4)
   - NatVibration (0.0.1)
   - NatVideo (0.0.3):
     - Reachability (~> 3.2)
   - NatVolume (0.0.2)
   - Reachability (3.2)
-  - SDWebImage (3.7.6):
-    - SDWebImage/Core (= 3.7.6)
-  - SDWebImage/Core (3.7.6)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
   - SocketRocket (0.4.2)
-  - TZImagePickerController (1.8.3)
-  - Weexplugin (0.0.1):
-    - NatAccelerometer (= 0.0.2)
-    - NatAudio (= 0.0.3)
-    - NatBattery (= 0.0.2)
-    - NatCamera (= 0.0.2)
-    - NatCommunication (= 0.0.1)
-    - NatCompass (= 0.0.1)
-    - NatDeviceInfo (= 0.0.2)
-    - NatDeviceNetwork (= 0.0.2)
-    - NatGeolocation (= 0.0.6)
-    - NatImage (= 0.0.7)
-    - NatModal (= 0.0.1)
-    - NatRecorder (= 0.0.2)
-    - NatScreen (= 0.0.1)
-    - NatStream (= 0.0.1)
-    - NatTransfer (= 0.0.3)
-    - NatVibration (= 0.0.1)
-    - NatVideo (= 0.0.3)
-    - NatVolume (= 0.0.2)
+  - TZImagePickerController (1.8.9)
+  - WeexNatCamera (1.0.0):
+    - NatCamera
+    - WeexPluginLoader
     - WeexSDK
-  - WeexSDK (0.13.0):
-    - SocketRocket
-  - WXDevtool (0.9.5):
+  - WeexNatCommunication (1.0.0):
+    - NatCommunication
+    - WeexPluginLoader
     - WeexSDK
+  - WeexNatDeviceBattery (1.0.0):
+    - NatBattery
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatDeviceInfo (1.0.0):
+    - NatDeviceInfo
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatDeviceNetwork (1.0.0):
+    - NatDeviceNetwork
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatDeviceScreen (1.0.0):
+    - NatScreen
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatDeviceVibration (1.0.0):
+    - NatVibration
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatDeviceVolume (1.0.0):
+    - NatVolume
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatGeolocation (1.0.1):
+    - NatGeolocation
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatMediaAudio (1.0.0):
+    - NatAudio
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatMediaImage (1.0.1):
+    - NatImage
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatMediaVideo (1.0.0):
+    - NatVideo
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatModal (1.0.1):
+    - NatModal
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatRecorder (1.0.0):
+    - NatRecorder
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatSensorAccelerometer (1.0.0):
+    - NatAccelerometer
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatSensorCompass (1.0.1):
+    - NatCompass
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatStream (1.0.0):
+    - NatStream
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexNatTransfer (1.0.1):
+    - NatTransfer
+    - WeexPluginLoader
+    - WeexSDK
+  - WeexPluginLoader (0.0.1.9.1):
+    - WeexSDK
+  - WeexSDK (0.18.0)
 
 DEPENDENCIES:
-  - ATSDK (= 0.0.1)
   - AVOSCloud
-  - SDWebImage (= 3.7.6)
+  - SDWebImage (= 3.7.5)
   - SocketRocket (= 0.4.2)
-  - Weexplugin (from `./Weexplugin/`)
+  - WeexNatCamera (= 1.0.0)
+  - WeexNatCommunication (= 1.0.0)
+  - WeexNatDeviceBattery (= 1.0.0)
+  - WeexNatDeviceInfo (= 1.0.0)
+  - WeexNatDeviceNetwork (= 1.0.0)
+  - WeexNatDeviceScreen (= 1.0.0)
+  - WeexNatDeviceVibration (= 1.0.0)
+  - WeexNatDeviceVolume (= 1.0.0)
+  - WeexNatGeolocation (= 1.0.1)
+  - WeexNatMediaAudio (= 1.0.0)
+  - WeexNatMediaImage (= 1.0.1)
+  - WeexNatMediaVideo (= 1.0.0)
+  - WeexNatModal (= 1.0.1)
+  - WeexNatRecorder (= 1.0.0)
+  - WeexNatSensorAccelerometer (= 1.0.0)
+  - WeexNatSensorCompass (= 1.0.1)
+  - WeexNatStream (= 1.0.0)
+  - WeexNatTransfer (= 1.0.1)
+  - WeexPluginLoader
   - WeexSDK
-  - WXDevtool
-
-EXTERNAL SOURCES:
-  Weexplugin:
-    :path: ./Weexplugin/
 
 SPEC CHECKSUMS:
-  ATSDK: 1df570b25312c98fedfb35696050851bccc0fdd3
-  AVOSCloud: a21318994cd97adaf9bf19cf0ac38187b3d94f00
+  AVOSCloud: e6639cc02af886d88aafce0217b31f181d5e3fc7
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  NatAccelerometer: 4cdd2deda166c2e0f4bc768e9dad5bfd01ca4a9c
+  NatAccelerometer: fa31a670e153ea5b84d937fd84799ff352b6f9fc
   NatAudio: b674c999c5f19b6079e1c29dcb77e3aadbd5907a
   NatBattery: f3a8acc1c56231414c7210dcb291f30def0e4844
   NatCamera: 99304f801d5c40511114a372e6c25edf3b56693e
-  NatCommunication: 3688bbbb7c6b06342d3d16a2e9cad93d7298bb99
-  NatCompass: 8ee744d241070c9283305ded1929c7f863b81192
-  NatDeviceInfo: fe10d92eb85c6df6d30cab1dd0800eeb3451b760
+  NatCommunication: 0f817c81d9443a7db5dd08e6dbcab6262b4e1e35
+  NatCompass: 545a3fcd2b4b2c5fb13ba593dc700c38ecbece4f
+  NatDeviceInfo: 7cbf18c7cacf3c612d08bee01bdfae3e274afdae
   NatDeviceNetwork: 9444b1c21f812732db3891be47cd568b686ca90b
   NatGeolocation: d209a2e3d0560ef55d4cda53d5292a4edb5a7b2a
   NatImage: 14c1e8a8cfccb915cb0b9ec7bc0ca1ae64f5de16
@@ -90,18 +151,35 @@ SPEC CHECKSUMS:
   NatRecorder: 27386fb313174e6f9139cf7b38cef4567bc35826
   NatScreen: c60e27b4980228331e87b29c7613c90cdec25587
   NatStream: 26c695d0b6495df33d6d065ed7ec35b89f3754c0
-  NatTransfer: 7676a11830465b0cfcf9576c9c06413797849bc1
+  NatTransfer: 3fdf4ef411560c9a016261e064d5a8dea4e05a3d
   NatVibration: da5234119c5a43e43c21c2f62b31c07d075324ca
   NatVideo: b237ef24322bbdbb73a4f244f476f39618cf5876
   NatVolume: 94607bea7d9f9344fd53dec156c509a8b16ed39e
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   SocketRocket: ffe08119b00ef982f6c37052a4705a057c8494ad
-  TZImagePickerController: 8c02d10822404b26c4330cdb79f2e46fb6a61473
-  Weexplugin: 875ad0f6fd1c2cf42f2b8f42ff6b87116ab85284
-  WeexSDK: 4651f0314ea6d77d771d587a3fcb38cdab9750f5
-  WXDevtool: 5135a5c6f4426fb635babb9eacfa14352bc66dc6
+  TZImagePickerController: b44f4cfc6d320dab9a53adcdda725099be36dcda
+  WeexNatCamera: b491f6d72384a195589da5d07ab49af61e427c67
+  WeexNatCommunication: c311619645926ba22a88261138f0513d08291729
+  WeexNatDeviceBattery: d2711ec24925cf1f958cb4297d297246f8539c99
+  WeexNatDeviceInfo: 8ae4585807c6024a9b71eae474fb1fe3e2bd2e9d
+  WeexNatDeviceNetwork: d6ec163bf16671af18ddc4f55bb1ea83b511db4d
+  WeexNatDeviceScreen: c022cc401482ef33f7af3608043f418b11f5719f
+  WeexNatDeviceVibration: 0087425d3f4fa687364a9eecf553846d35ab77f5
+  WeexNatDeviceVolume: 8ad29cdad7960ccdf1fc5ece0e9731478d98e3de
+  WeexNatGeolocation: c22a30601c0d5829b3f55941b47c38cc14637881
+  WeexNatMediaAudio: afefb553c0bfbe6f2cecb97d259a279f000f3c0b
+  WeexNatMediaImage: 7440478660085e8d126f117b53de6297d05688fc
+  WeexNatMediaVideo: 1569450ac13451424f397434bdd6cfd0b071ee1c
+  WeexNatModal: a7aaa8cefd0fdad745ea62b52bc8108a1ee68529
+  WeexNatRecorder: aa8883a36eec61c487a43918302ea2d6e4b2fcca
+  WeexNatSensorAccelerometer: 8a31ccd0aaf536fb1f2f22dbf270574df5f111f6
+  WeexNatSensorCompass: c864d8160cb28aa0b53047e5791d03aed7100f60
+  WeexNatStream: 38a2d5304f4ccc052d25d320fb5b0b4ba6de44a8
+  WeexNatTransfer: 5c2ec341bb449141520f403ad00c719e2a1c54c4
+  WeexPluginLoader: 85c1304f8ba29864e58531614a0acfeceef1b85c
+  WeexSDK: ac56f255ce9a48e93ebc2e003956ab20da33321d
 
-PODFILE CHECKSUM: b1d7f3cedc14c05a58017d06c346e239b2e6542d
+PODFILE CHECKSUM: 4db85dd3d1b37e7fe0a760ce1fd3b94ed4409fc4
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.4.0

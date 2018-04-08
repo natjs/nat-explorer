@@ -12,7 +12,7 @@ const navigator = weex.requireModule('navigator')
 export default {
 	name: 'nav-bar',
 
-	data () {
+	data() {
 		return {
 			cdnUri: env.cdnUri
 		}
@@ -39,7 +39,6 @@ export default {
 	padding-left: 12px;
 	padding-right: 12px;
 	flex-direction: row;
-	justify-content: flex-start;
 	align-items: center;
 }
 

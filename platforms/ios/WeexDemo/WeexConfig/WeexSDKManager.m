@@ -8,10 +8,8 @@
 
 #import "WeexSDKManager.h"
 #import "DemoDefine.h"
-#import "WeexBundleUrlLoder.h"
 #import <WeexSDK/WeexSDK.h>
 #import "WXDemoViewController.h"
-#import "WeexPluginManager.h"
 #import "WXImgLoaderDefaultImpl.h"
 
 @implementation WeexSDKManager
@@ -21,21 +19,24 @@
     NSURL *url = nil;
 #if DEBUG
     //If you are debugging in device , please change the host to current IP of your computer.
-    WeexBundleUrlLoder *loader = [WeexBundleUrlLoder new];
-    url = [loader jsBundleURL];
-    if (!url) {
-        url = [NSURL URLWithString:BUNDLE_URL];
-    }
+    url = [NSURL URLWithString:BUNDLE_URL];
 #else
     url = [NSURL URLWithString:BUNDLE_URL];
 #endif
+    NSString * entryURL = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"WXEntryBundleURL"];
+    if (entryURL) {
+        if ([entryURL hasPrefix:@"http"]) {
+            url = [NSURL URLWithString:entryURL];
+        } else {
+            url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[[NSBundle bundleForClass:self] resourceURL].absoluteString, entryURL]];
+        }
+    }
     
 #ifdef UITEST
     url = [NSURL URLWithString:UITEST_HOME_URL];
 #endif
     
     [self initWeexSDK];
-    [WeexPluginManager registerWeexPlugin];
     [self loadCustomContainWithScannerWithUrl:url];
 }
 
@@ -43,8 +44,8 @@
 {
     [WXAppConfiguration setAppGroup:@"Instapp"];
     [WXAppConfiguration setAppName:@"NatExample"];
-    [WXAppConfiguration setAppVersion:@"1.0.0"];
-    [WXAppConfiguration setExternalUserAgent:@"nat/0.0.8"];
+    [WXAppConfiguration setAppVersion:@"1.1.0"];
+    [WXAppConfiguration setExternalUserAgent:@"nat/0.1.5"];
     
     [WXSDKEngine initSDKEnvironment];
     

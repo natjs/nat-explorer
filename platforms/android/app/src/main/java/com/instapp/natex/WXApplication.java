@@ -1,15 +1,14 @@
 package com.instapp.natex;
 
 import android.app.Application;
+import android.os.Build;
+import android.os.StrictMode;
 
-import com.instapp.natex.commons.adapter.ImageAdapter;
-import com.instapp.natex.commons.util.AppConfig;
-import com.instapp.natex.extend.module.EventModule;
-import com.instapp.natex.extend.module.NavigatorModule;
-import com.instapp.natex.pluginmanager.PluginManager;
-import com.facebook.drawee.backends.pipeline.Fresco;
+import com.instapp.natex.extend.ImageAdapter;
+import com.instapp.natex.extend.WXEventModule;
+import com.alibaba.weex.plugin.loader.WeexPluginContainer;
+import com.instapp.natex.util.AppConfig;
 import com.taobao.weex.InitConfig;
-import com.taobao.weex.WXEnvironment;
 import com.taobao.weex.WXSDKEngine;
 import com.taobao.weex.common.WXException;
 import com.avos.avoscloud.AVOSCloud;
@@ -17,47 +16,32 @@ import com.avos.avoscloud.AVAnalytics;
 
 public class WXApplication extends Application {
 
-	@Override
-	public void onCreate() {
-		super.onCreate();
-//    initDebugEnvironment(true, false, "DEBUG_SERVER_HOST");
+  @Override
+  public void onCreate() {
+    if (Build.VERSION.SDK_INT>=18) {
+      StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+      StrictMode.setVmPolicy(builder.build());
+      builder.detectFileUriExposure();
+    }
 
-		WXSDKEngine.addCustomOptions("appName", "NatExplorer");
-		WXSDKEngine.addCustomOptions("appGroup", "Nat");
-		WXSDKEngine.initialize(this,
-				new InitConfig.Builder()
-						.setImgAdapter(new ImageAdapter())
-						.build()
-		);
+    super.onCreate();
 
-		AVOSCloud.useAVCloudUS();
-		AVOSCloud.initialize(this, ApiKey.LC_APPID, ApiKey.LC_APPKEY);
-		AVAnalytics.enableCrashReport(this, true);
+    WXSDKEngine.addCustomOptions("appName", "NatExplorer");
+    WXSDKEngine.addCustomOptions("appGroup", "Instapp");
+    WXSDKEngine.initialize(this,
+        new InitConfig.Builder().setImgAdapter(new ImageAdapter()).build()
+    );
 
-		try {
-			WXSDKEngine.registerModule("event", EventModule.class);
-			WXSDKEngine.registerModule("navigator", NavigatorModule.class);
-		} catch (WXException e) {
-			e.printStackTrace();
-		}
-		Fresco.initialize(this);
-		AppConfig.init(this);
-		PluginManager.init(this);
-	}
+    AVOSCloud.useAVCloudUS();
+    AVOSCloud.initialize(this, ApiKey.LC_APPID, ApiKey.LC_APPKEY);
+    AVAnalytics.enableCrashReport(this, true);
 
-	/**
-	 * @param enable enable remote debugger. valid only if host not to be "DEBUG_SERVER_HOST".
-	 *               true, you can launch a remote debugger and inspector both.
-	 *               false, you can  just launch a inspector.
-	 * @param host   the debug server host, must not be "DEBUG_SERVER_HOST", a ip address or domain will be OK.
-	 *               for example "127.0.0.1".
-	 */
-	private void initDebugEnvironment(boolean connectable,boolean enable, String host) {
-		if (!"DEBUG_SERVER_HOST".equals(host)) {
-			WXEnvironment.sDebugServerConnectable = connectable;
-			WXEnvironment.sRemoteDebugMode = enable;
-			WXEnvironment.sRemoteDebugProxyUrl = "ws://" + host + ":8088/debugProxy/native";
-		}
-	}
-
+    try {
+      WXSDKEngine.registerModule("event", WXEventModule.class);
+    } catch (WXException e) {
+      e.printStackTrace();
+    }
+    AppConfig.init(this);
+    WeexPluginContainer.loadAll(this);
+  }
 }

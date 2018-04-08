@@ -59,11 +59,11 @@ const modules = [{
 		path: 'views/network/fetch.js',
 		hints: 'stream'
 	}, {
-		name: 'download',
+		name: 'Download',
 		path: 'views/network/download.js',
 		hints: 'transfer'
 	}, {
-		name: 'upload',
+		name: 'Upload',
 		path: 'views/network/upload.js',
 		hints: 'transfer'
 	}]
@@ -104,6 +104,15 @@ const modules = [{
 		name: 'Battery',
 		path: 'views/device/battery.js'
 	}]
-}]
+}/* , {
+	name: 'Third-Party',
+	functions: [{
+		name: 'Alipay',
+		path: 'views/third-party/alipay.js'
+	}, {
+		name: 'Wechat',
+		path: 'views/third-party/wechat.js'
+	}]
+} */]
 
 export default modules

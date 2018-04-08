@@ -16,6 +16,7 @@
 		}
 	},
 	"rules": {
+		"prefer-const": 0,
 		"no-console": 1,
 		"no-cond-assign": 2,
 		"no-irregular-whitespace": 2,

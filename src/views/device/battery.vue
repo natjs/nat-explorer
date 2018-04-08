@@ -40,6 +40,11 @@ export default {
 	methods: {
 		getBatteryStatus() {
 			Nat.battery.status((err, ret) => {
+				if (err) {
+					Nat.toast('[ERROR] ' + JSON.stringify(err))
+					return
+				}
+
 				Nat.toast(JSON.stringify(ret, null, 2))
 			})
 		}

@@ -10,14 +10,13 @@
 					.dot
 					text.title Simple Download
 				text.code
-					| Nat.download(this.url, (err, res) => {
-					| 	if (err) {
-					| 		Nat.toast('[ERROR] ' + JSON.stringify(err))
-					| 		return
-					| 	}
-					|
-					| 	Nat.toast(JSON.stringify(res))
-					| })
+					| Nat.download(this.url)
+					| 	.then((res) => {
+					| 		Nat.toast(JSON.stringify(res))
+					| 	})
+					| 	.catch((e) => {
+					| 		Nat.toast('[ERROR] ' + JSON.stringify(e))
+					| 	})
 
 			.case(@click="downloadWithOptsnHook")
 				.header
@@ -32,14 +31,13 @@
 					| 	onProgress: (p) => {
 					| 		Nat.toast('Progressing: ' + p)
 					| 	}
-					| }, (err, res) => {
-					| 	if (err) {
-					| 		Nat.toast('[ERROR] ' + JSON.stringify(err))
-					| 		return
-					| 	}
-					|
-					| 	Nat.toast(JSON.stringify(res))
 					| })
+					| 	.then((res) => {
+					| 		Nat.toast(JSON.stringify(res))
+					| 	})
+					| 	.catch((e) => {
+					| 		Nat.toast('[ERROR] ' + JSON.stringify(e))
+					| 	})
 
 </template>
 
@@ -67,14 +65,13 @@ export default {
 
 	methods: {
 		download() {
-			Nat.download(this.url, (err, res) => {
-				if (err) {
-					Nat.toast('[ERROR] ' + JSON.stringify(err))
-					return
-				}
-
-				Nat.toast(JSON.stringify(res))
-			})
+			Nat.download(this.url)
+				.then((res) => {
+					Nat.toast(JSON.stringify(res))
+				})
+				.catch((e) => {
+					Nat.toast('[ERROR] ' + JSON.stringify(e))
+				})
 		},
 
 		downloadWithOptsnHook() {
@@ -86,14 +83,13 @@ export default {
 				onProgress: (p) => {
 					Nat.toast('Progressing: ' + p)
 				}
-			}, (err, res) => {
-				if (err) {
-					Nat.toast('[ERROR] ' + JSON.stringify(err))
-					return
-				}
-
-				Nat.toast(JSON.stringify(res))
 			})
+				.then((res) => {
+					Nat.toast(JSON.stringify(res))
+				})
+				.catch((e) => {
+					Nat.toast('[ERROR] ' + JSON.stringify(e))
+				})
 		}
 	}
 }

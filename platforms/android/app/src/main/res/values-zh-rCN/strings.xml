@@ -16,10 +16,8 @@
  -->
 <resources>
   <string name="app_name">Nat Explorer</string>
-  <string name="dummy_content">Nat</string>
+
   <string name="capture_qrcode_prompt">请将条码置于取景框内扫描</string>
   <string name="cpu_not_support_tip">对不起,您当前的设备是X86架构.\n我们只支持ARM架构的设备!</string>
-  <string name="index_tip">网络错误</string>
-  <string name="scan_qr_code">扫描</string>
-  <string name="page_refresh">刷新</string>
+
 </resources>

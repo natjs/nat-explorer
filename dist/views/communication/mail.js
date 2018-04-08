@@ -1,3 +1,3605 @@
 // { "framework": "Vue"} 
 
-!function(e){function t(o){if(n[o])return n[o].exports;var r=n[o]={i:o,l:!1,exports:{}};return e[o].call(r.exports,r,r.exports,t),r.l=!0,r.exports}var n={};t.m=e,t.c=n,t.i=function(e){return e},t.d=function(e,n,o){t.o(e,n)||Object.defineProperty(e,n,{configurable:!1,enumerable:!0,get:o})},t.n=function(e){var n=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(n,"a",n),n},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p="",t(t.s=199)}([function(e,t){var n=e.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=n)},function(e,t){var n={}.hasOwnProperty;e.exports=function(e,t){return n.call(e,t)}},function(e,t,n){var o=n(48),r=n(14);e.exports=function(e){return o(r(e))}},function(e,t,n){e.exports=!n(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(e,t,n){var o=n(5),r=n(11);e.exports=n(3)?function(e,t,n){return o.f(e,t,r(1,n))}:function(e,t,n){return e[t]=n,e}},function(e,t,n){var o=n(7),r=n(29),i=n(23),u=Object.defineProperty;t.f=n(3)?Object.defineProperty:function(e,t,n){if(o(e),t=i(t,!0),o(n),r)try{return u(e,t,n)}catch(e){}if("get"in n||"set"in n)throw TypeError("Accessors not supported!");return"value"in n&&(e[t]=n.value),e}},function(e,t,n){var o=n(21)("wks"),r=n(12),i=n(0).Symbol,u="function"==typeof i;(e.exports=function(e){return o[e]||(o[e]=u&&i[e]||(u?i:r)("Symbol."+e))}).store=o},function(e,t,n){var o=n(9);e.exports=function(e){if(!o(e))throw TypeError(e+" is not an object!");return e}},function(e,t){e.exports=function(e){try{return!!e()}catch(e){return!0}}},function(e,t){e.exports=function(e){return"object"==typeof e?null!==e:"function"==typeof e}},function(e,t,n){var o=n(34),r=n(15);e.exports=Object.keys||function(e){return o(e,r)}},function(e,t){e.exports=function(e,t){return{enumerable:!(1&e),configurable:!(2&e),writable:!(4&e),value:t}}},function(e,t){var n=0,o=Math.random();e.exports=function(e){return"Symbol(".concat(void 0===e?"":e,")_",(++n+o).toString(36))}},function(e,t){var n=e.exports={version:"2.4.0"};"number"==typeof __e&&(__e=n)},function(e,t){e.exports=function(e){if(void 0==e)throw TypeError("Can't call method on  "+e);return e}},function(e,t){e.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(e,t){e.exports={}},function(e,t){e.exports=!0},function(e,t){t.f={}.propertyIsEnumerable},function(e,t,n){var o=n(5).f,r=n(1),i=n(6)("toStringTag");e.exports=function(e,t,n){e&&!r(e=n?e:e.prototype,i)&&o(e,i,{configurable:!0,value:t})}},function(e,t,n){var o=n(21)("keys"),r=n(12);e.exports=function(e){return o[e]||(o[e]=r(e))}},function(e,t,n){var o=n(0),r=o["__core-js_shared__"]||(o["__core-js_shared__"]={});e.exports=function(e){return r[e]||(r[e]={})}},function(e,t){var n=Math.ceil,o=Math.floor;e.exports=function(e){return isNaN(e=+e)?0:(e>0?o:n)(e)}},function(e,t,n){var o=n(9);e.exports=function(e,t){if(!o(e))return e;var n,r;if(t&&"function"==typeof(n=e.toString)&&!o(r=n.call(e)))return r;if("function"==typeof(n=e.valueOf)&&!o(r=n.call(e)))return r;if(!t&&"function"==typeof(n=e.toString)&&!o(r=n.call(e)))return r;throw TypeError("Can't convert object to primitive value")}},function(e,t,n){var o=n(0),r=n(13),i=n(17),u=n(25),f=n(5).f;e.exports=function(e){var t=r.Symbol||(r.Symbol=i?{}:o.Symbol||{});"_"==e.charAt(0)||e in t||f(t,e,{value:u.f(e)})}},function(e,t,n){t.f=n(6)},function(e,t){var n={}.toString;e.exports=function(e){return n.call(e).slice(8,-1)}},function(e,t,n){var o=n(9),r=n(0).document,i=o(r)&&o(r.createElement);e.exports=function(e){return i?r.createElement(e):{}}},function(e,t,n){var o=n(0),r=n(13),i=n(45),u=n(4),f=function(e,t,n){var c,s,a,l=e&f.F,p=e&f.G,d=e&f.S,y=e&f.P,_=e&f.B,m=e&f.W,v=p?r:r[t]||(r[t]={}),x=v.prototype,w=p?o:d?o[t]:(o[t]||{}).prototype;p&&(n=t);for(c in n)(s=!l&&w&&void 0!==w[c])&&c in v||(a=s?w[c]:n[c],v[c]=p&&"function"!=typeof w[c]?n[c]:_&&s?i(a,o):m&&w[c]==a?function(e){var t=function(t,n,o){if(this instanceof e){switch(arguments.length){case 0:return new e;case 1:return new e(t);case 2:return new e(t,n)}return new e(t,n,o)}return e.apply(this,arguments)};return t.prototype=e.prototype,t}(a):y&&"function"==typeof a?i(Function.call,a):a,y&&((v.virtual||(v.virtual={}))[c]=a,e&f.R&&x&&!x[c]&&u(x,c,a)))};f.F=1,f.G=2,f.S=4,f.P=8,f.B=16,f.W=32,f.U=64,f.R=128,e.exports=f},function(e,t,n){e.exports=!n(3)&&!n(8)(function(){return 7!=Object.defineProperty(n(27)("div"),"a",{get:function(){return 7}}).a})},function(e,t,n){"use strict";var o=n(17),r=n(28),i=n(35),u=n(4),f=n(1),c=n(16),s=n(50),a=n(19),l=n(57),p=n(6)("iterator"),d=!([].keys&&"next"in[].keys()),y=function(){return this};e.exports=function(e,t,n,_,m,v,x){s(n,t,_);var w,h,g,b=function(e){if(!d&&e in O)return O[e];switch(e){case"keys":case"values":return function(){return new n(this,e)}}return function(){return new n(this,e)}},M=t+" Iterator",S="values"==m,P=!1,O=e.prototype,j=O[p]||O["@@iterator"]||m&&O[m],E=j||b(m),I=m?S?b("entries"):E:void 0,k="Array"==t?O.entries||j:j;if(k&&(g=l(k.call(new e)))!==Object.prototype&&(a(g,M,!0),o||f(g,p)||u(g,p,y)),S&&j&&"values"!==j.name&&(P=!0,E=function(){return j.call(this)}),o&&!x||!d&&!P&&O[p]||u(O,p,E),c[t]=E,c[M]=y,m)if(w={values:S?E:b("values"),keys:v?E:b("keys"),entries:I},x)for(h in w)h in O||i(O,h,w[h]);else r(r.P+r.F*(d||P),t,w);return w}},function(e,t,n){var o=n(7),r=n(54),i=n(15),u=n(20)("IE_PROTO"),f=function(){},c=function(){var e,t=n(27)("iframe"),o=i.length;for(t.style.display="none",n(47).appendChild(t),t.src="javascript:",e=t.contentWindow.document,e.open(),e.write("<script>document.F=Object<\/script>"),e.close(),c=e.F;o--;)delete c.prototype[i[o]];return c()};e.exports=Object.create||function(e,t){var n;return null!==e?(f.prototype=o(e),n=new f,f.prototype=null,n[u]=e):n=c(),void 0===t?n:r(n,t)}},function(e,t,n){var o=n(34),r=n(15).concat("length","prototype");t.f=Object.getOwnPropertyNames||function(e){return o(e,r)}},function(e,t){t.f=Object.getOwnPropertySymbols},function(e,t,n){var o=n(1),r=n(2),i=n(44)(!1),u=n(20)("IE_PROTO");e.exports=function(e,t){var n,f=r(e),c=0,s=[];for(n in f)n!=u&&o(f,n)&&s.push(n);for(;t.length>c;)o(f,n=t[c++])&&(~i(s,n)||s.push(n));return s}},function(e,t,n){e.exports=n(4)},function(e,t,n){"use strict";var o=n(39),r=n.n(o),i={isNative:"object"!==("undefined"==typeof window?"undefined":r()(window)),platform:weex.config.env.platform,deviceWidth:weex.config.env.deviceWidth,deviceHeight:weex.config.env.deviceHeight,cdnUri:"http://cdn.instapp.io/nat/",get baseUrl(){var e=void 0,t=weex.config.bundleUrl,n=t.indexOf("file://assets/")>-1,o=t.indexOf("file:///")>-1;if(n)e="file://assets/dist/";else if(o)e=t.substring(0,t.lastIndexOf("/")+1);else{var r="localhost:8080",i=/\/\/([^\/]+?)\//.exec(t);r=i&&i.length>=2?i[1]:r,e="http://"+r+"/dist/"}return e}};t.a=i},function(e,t,n){e.exports={default:n(40),__esModule:!0}},function(e,t,n){e.exports={default:n(41),__esModule:!0}},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var r=n(38),i=o(r),u=n(37),f=o(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(e){return typeof e}:function(e){return e&&"function"==typeof f.default&&e.constructor===f.default&&e!==f.default.prototype?"symbol":typeof e};t.default="function"==typeof f.default&&"symbol"===c(i.default)?function(e){return void 0===e?"undefined":c(e)}:function(e){return e&&"function"==typeof f.default&&e.constructor===f.default&&e!==f.default.prototype?"symbol":void 0===e?"undefined":c(e)}},function(e,t,n){n(65),n(63),n(66),n(67),e.exports=n(13).Symbol},function(e,t,n){n(64),n(68),e.exports=n(25).f("iterator")},function(e,t){e.exports=function(e){if("function"!=typeof e)throw TypeError(e+" is not a function!");return e}},function(e,t){e.exports=function(){}},function(e,t,n){var o=n(2),r=n(60),i=n(59);e.exports=function(e){return function(t,n,u){var f,c=o(t),s=r(c.length),a=i(u,s);if(e&&n!=n){for(;s>a;)if((f=c[a++])!=f)return!0}else for(;s>a;a++)if((e||a in c)&&c[a]===n)return e||a||0;return!e&&-1}}},function(e,t,n){var o=n(42);e.exports=function(e,t,n){if(o(e),void 0===t)return e;switch(n){case 1:return function(n){return e.call(t,n)};case 2:return function(n,o){return e.call(t,n,o)};case 3:return function(n,o,r){return e.call(t,n,o,r)}}return function(){return e.apply(t,arguments)}}},function(e,t,n){var o=n(10),r=n(33),i=n(18);e.exports=function(e){var t=o(e),n=r.f;if(n)for(var u,f=n(e),c=i.f,s=0;f.length>s;)c.call(e,u=f[s++])&&t.push(u);return t}},function(e,t,n){e.exports=n(0).document&&document.documentElement},function(e,t,n){var o=n(26);e.exports=Object("z").propertyIsEnumerable(0)?Object:function(e){return"String"==o(e)?e.split(""):Object(e)}},function(e,t,n){var o=n(26);e.exports=Array.isArray||function(e){return"Array"==o(e)}},function(e,t,n){"use strict";var o=n(31),r=n(11),i=n(19),u={};n(4)(u,n(6)("iterator"),function(){return this}),e.exports=function(e,t,n){e.prototype=o(u,{next:r(1,n)}),i(e,t+" Iterator")}},function(e,t){e.exports=function(e,t){return{value:t,done:!!e}}},function(e,t,n){var o=n(10),r=n(2);e.exports=function(e,t){for(var n,i=r(e),u=o(i),f=u.length,c=0;f>c;)if(i[n=u[c++]]===t)return n}},function(e,t,n){var o=n(12)("meta"),r=n(9),i=n(1),u=n(5).f,f=0,c=Object.isExtensible||function(){return!0},s=!n(8)(function(){return c(Object.preventExtensions({}))}),a=function(e){u(e,o,{value:{i:"O"+ ++f,w:{}}})},l=function(e,t){if(!r(e))return"symbol"==typeof e?e:("string"==typeof e?"S":"P")+e;if(!i(e,o)){if(!c(e))return"F";if(!t)return"E";a(e)}return e[o].i},p=function(e,t){if(!i(e,o)){if(!c(e))return!0;if(!t)return!1;a(e)}return e[o].w},d=function(e){return s&&y.NEED&&c(e)&&!i(e,o)&&a(e),e},y=e.exports={KEY:o,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(e,t,n){var o=n(5),r=n(7),i=n(10);e.exports=n(3)?Object.defineProperties:function(e,t){r(e);for(var n,u=i(t),f=u.length,c=0;f>c;)o.f(e,n=u[c++],t[n]);return e}},function(e,t,n){var o=n(18),r=n(11),i=n(2),u=n(23),f=n(1),c=n(29),s=Object.getOwnPropertyDescriptor;t.f=n(3)?s:function(e,t){if(e=i(e),t=u(t,!0),c)try{return s(e,t)}catch(e){}if(f(e,t))return r(!o.f.call(e,t),e[t])}},function(e,t,n){var o=n(2),r=n(32).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(e){try{return r(e)}catch(e){return u.slice()}};e.exports.f=function(e){return u&&"[object Window]"==i.call(e)?f(e):r(o(e))}},function(e,t,n){var o=n(1),r=n(61),i=n(20)("IE_PROTO"),u=Object.prototype;e.exports=Object.getPrototypeOf||function(e){return e=r(e),o(e,i)?e[i]:"function"==typeof e.constructor&&e instanceof e.constructor?e.constructor.prototype:e instanceof Object?u:null}},function(e,t,n){var o=n(22),r=n(14);e.exports=function(e){return function(t,n){var i,u,f=String(r(t)),c=o(n),s=f.length;return c<0||c>=s?e?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===s||(u=f.charCodeAt(c+1))<56320||u>57343?e?f.charAt(c):i:e?f.slice(c,c+2):u-56320+(i-55296<<10)+65536)}}},function(e,t,n){var o=n(22),r=Math.max,i=Math.min;e.exports=function(e,t){return e=o(e),e<0?r(e+t,0):i(e,t)}},function(e,t,n){var o=n(22),r=Math.min;e.exports=function(e){return e>0?r(o(e),9007199254740991):0}},function(e,t,n){var o=n(14);e.exports=function(e){return Object(o(e))}},function(e,t,n){"use strict";var o=n(43),r=n(51),i=n(16),u=n(2);e.exports=n(30)(Array,"Array",function(e,t){this._t=u(e),this._i=0,this._k=t},function(){var e=this._t,t=this._k,n=this._i++;return!e||n>=e.length?(this._t=void 0,r(1)):"keys"==t?r(0,n):"values"==t?r(0,e[n]):r(0,[n,e[n]])},"values"),i.Arguments=i.Array,o("keys"),o("values"),o("entries")},function(e,t){},function(e,t,n){"use strict";var o=n(58)(!0);n(30)(String,"String",function(e){this._t=String(e),this._i=0},function(){var e,t=this._t,n=this._i;return n>=t.length?{value:void 0,done:!0}:(e=o(t,n),this._i+=e.length,{value:e,done:!1})})},function(e,t,n){"use strict";var o=n(0),r=n(1),i=n(3),u=n(28),f=n(35),c=n(53).KEY,s=n(8),a=n(21),l=n(19),p=n(12),d=n(6),y=n(25),_=n(24),m=n(52),v=n(46),x=n(49),w=n(7),h=n(2),g=n(23),b=n(11),M=n(31),S=n(56),P=n(55),O=n(5),j=n(10),E=P.f,I=O.f,k=S.f,C=o.Symbol,N=o.JSON,A=N&&N.stringify,T=d("_hidden"),q=d("toPrimitive"),R={}.propertyIsEnumerable,F=a("symbol-registry"),U=a("symbols"),G=a("op-symbols"),D=Object.prototype,B="function"==typeof C,L=o.QObject,W=!L||!L.prototype||!L.prototype.findChild,z=i&&s(function(){return 7!=M(I({},"a",{get:function(){return I(this,"a",{value:7}).a}})).a})?function(e,t,n){var o=E(D,t);o&&delete D[t],I(e,t,n),o&&e!==D&&I(D,t,o)}:I,H=function(e){var t=U[e]=M(C.prototype);return t._k=e,t},V=B&&"symbol"==typeof C.iterator?function(e){return"symbol"==typeof e}:function(e){return e instanceof C},$=function(e,t,n){return e===D&&$(G,t,n),w(e),t=g(t,!0),w(n),r(U,t)?(n.enumerable?(r(e,T)&&e[T][t]&&(e[T][t]=!1),n=M(n,{enumerable:b(0,!1)})):(r(e,T)||I(e,T,b(1,{})),e[T][t]=!0),z(e,t,n)):I(e,t,n)},J=function(e,t){w(e);for(var n,o=v(t=h(t)),r=0,i=o.length;i>r;)$(e,n=o[r++],t[n]);return e},K=function(e,t){return void 0===t?M(e):J(M(e),t)},Y=function(e){var t=R.call(this,e=g(e,!0));return!(this===D&&r(U,e)&&!r(G,e))&&(!(t||!r(this,e)||!r(U,e)||r(this,T)&&this[T][e])||t)},Q=function(e,t){if(e=h(e),t=g(t,!0),e!==D||!r(U,t)||r(G,t)){var n=E(e,t);return!n||!r(U,t)||r(e,T)&&e[T][t]||(n.enumerable=!0),n}},X=function(e){for(var t,n=k(h(e)),o=[],i=0;n.length>i;)r(U,t=n[i++])||t==T||t==c||o.push(t);return o},Z=function(e){for(var t,n=e===D,o=k(n?G:h(e)),i=[],u=0;o.length>u;)!r(U,t=o[u++])||n&&!r(D,t)||i.push(U[t]);return i};B||(C=function(){if(this instanceof C)throw TypeError("Symbol is not a constructor!");var e=p(arguments.length>0?arguments[0]:void 0),t=function(n){this===D&&t.call(G,n),r(this,T)&&r(this[T],e)&&(this[T][e]=!1),z(this,e,b(1,n))};return i&&W&&z(D,e,{configurable:!0,set:t}),H(e)},f(C.prototype,"toString",function(){return this._k}),P.f=Q,O.f=$,n(32).f=S.f=X,n(18).f=Y,n(33).f=Z,i&&!n(17)&&f(D,"propertyIsEnumerable",Y,!0),y.f=function(e){return H(d(e))}),u(u.G+u.W+u.F*!B,{Symbol:C});for(var ee="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),te=0;ee.length>te;)d(ee[te++]);for(var ee=j(d.store),te=0;ee.length>te;)_(ee[te++]);u(u.S+u.F*!B,"Symbol",{for:function(e){return r(F,e+="")?F[e]:F[e]=C(e)},keyFor:function(e){if(V(e))return m(F,e);throw TypeError(e+" is not a symbol!")},useSetter:function(){W=!0},useSimple:function(){W=!1}}),u(u.S+u.F*!B,"Object",{create:K,defineProperty:$,defineProperties:J,getOwnPropertyDescriptor:Q,getOwnPropertyNames:X,getOwnPropertySymbols:Z}),N&&u(u.S+u.F*(!B||s(function(){var e=C();return"[null]"!=A([e])||"{}"!=A({a:e})||"{}"!=A(Object(e))})),"JSON",{stringify:function(e){if(void 0!==e&&!V(e)){for(var t,n,o=[e],r=1;arguments.length>r;)o.push(arguments[r++]);return t=o[1],"function"==typeof t&&(n=t),!n&&x(t)||(t=function(e,t){if(n&&(t=n.call(this,e,t)),!V(t))return t}),o[1]=t,A.apply(N,o)}}}),C.prototype[q]||n(4)(C.prototype,q,C.prototype.valueOf),l(C,"Symbol"),l(Math,"Math",!0),l(o.JSON,"JSON",!0)},function(e,t,n){n(24)("asyncIterator")},function(e,t,n){n(24)("observable")},function(e,t,n){n(62);for(var o=n(0),r=n(4),i=n(16),u=n(6)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var s=f[c],a=o[s],l=a&&a.prototype;l&&!l[u]&&r(l,u,s),i[s]=i.Array}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o=n(36);t.default={name:"status-bar",data:function(){return{platform:o.a.platform,style:{backgroundColor:this.backgroundColor}}},props:{backgroundColor:{type:String,default:"#fff"}}}},function(e,t){e.exports={bar:{width:750,height:40,backgroundColor:"#ffffff"}}},function(e,t){e.exports={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return"iOS"===e.platform?n("div",{staticClass:["bar"],style:e.style}):e._e()},staticRenderFns:[]},e.exports.render._withStripped=!0},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o=n(36),r=weex.requireModule("navigator");t.default={name:"nav-bar",data:function(){return{cdnUri:o.a.cdnUri}},methods:{pop:function(){r.pop()}}}},function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={name:"title-bar",data:function(){return{}},props:{title:{type:String,required:!0}}}},function(e,t){e.exports={navbar:{width:750,height:88,backgroundColor:"#ffffff"},back:{width:186,height:88,paddingLeft:12,paddingRight:12,flexDirection:"row",justifyContent:"flex-start",alignItems:"center"},arrow:{width:40,height:40,marginRight:2},"back-txt":{color:"#3D83FB",fontSize:34,lineHeight:34,paddingTop:3,paddingBottom:3,height:40}}},function(e,t){e.exports={title:{fontSize:72,fontWeight:"bold",lineHeight:72,height:100,paddingTop:14,paddingBottom:14,marginTop:8,marginBottom:32}}},function(e,t){e.exports={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:["navbar"]},[n("div",{staticClass:["back"],on:{click:e.pop}},[n("image",{staticClass:["arrow"],attrs:{src:e.cdnUri+"back_arrow.png"}}),n("text",{staticClass:["back-txt"]},[e._v("Back")])])])},staticRenderFns:[]},e.exports.render._withStripped=!0},function(e,t){e.exports={render:function(){var e=this,t=e.$createElement;return(e._self._c||t)("text",{staticClass:["title"]},[e._v(e._s(e.title))])},staticRenderFns:[]},e.exports.render._withStripped=!0},function(e,t,n){var o,r,i=[];i.push(n(70)),o=n(69);var u=n(71);r=o=o||{},"object"!=typeof o.default&&"function"!=typeof o.default||(Object.keys(o).some(function(e){return"default"!==e&&"__esModule"!==e})&&console.error("named exports are not supported in *.vue files."),r=o=o.default),"function"==typeof r&&(r=r.options),r.__file="/Users/Acathur/Development/Nat/nat-example/src/layout/status-bar.vue",r.render=u.render,r.staticRenderFns=u.staticRenderFns,r._scopeId="data-v-03efc5f8",r.style=r.style||{},i.forEach(function(e){for(var t in e)r.style[t]=e[t]}),"function"==typeof __register_static_styles__&&__register_static_styles__(r._scopeId,i),e.exports=o},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/camera"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/camera")});var r=function(e){o.launch()},i=function(e,t){return e=e||{},new Promise(function(n,r){o.captureImage({width:e.width||null,height:e.height||null},function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},u=function(e,t){return e=e||{},new Promise(function(n,r){o.captureVideo({width:e.width||null,height:e.height||null},function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})};e.exports={launch:r,captureImage:i,captureVideo:u}},function(e,t,n){"use strict";var o=n(103),r=function(e){return e&&e.__esModule?e:{default:e}}(o),i=void 0;weex&&weex.requireModule?i=weex.requireModule("nat/communication"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){i=e("@weex-module/nat/communication")});var u=function(e,t){return new Promise(function(n,o){return e?r.default.isPhone(e)?void i.call(e,function(e){e=e||{},e.error?(o(e.error),"function"==typeof t&&t(e.error,null)):(n(),"function"==typeof t&&t(null))}):void o({code:101050,message:"CALL_INVALID_ARGUMENT",details:"Invalid phone number: "+e}):void o({code:101040,message:"CALL_MISSING_ARGUMENT"})})},f=function(e,t,n){return t=t||"","function"==typeof t&&(n=t,t=""),new Promise(function(o,u){if(!e)return void u({code:102040,message:"SMS_MISSING_ARGUMENT"});"string"==typeof e&&(e=[e]);for(var f=0;f<e.length;f++)if(!r.default.isPhone(e[f]))return void u({code:102050,message:"SMS_INVALID_ARGUMENT"});i.sms(e,t,function(e){e=e||{},e.error?(u(e.error),"function"==typeof n&&n(e.error,null)):(o(),"function"==typeof n&&n(null))})})},c=function(e,t,n){return t=t||{},"function"==typeof t&&(n=t,t={}),new Promise(function(o,u){if(!e)return void u({code:103040,message:"MAIL_MISSING_ARGUMENT"});"string"==typeof e&&(e=[e]);for(var f=0;f<e.length;f++)if(!r.default.isEmail(e[f]))return void u({code:103050,message:"MAIL_INVALID_ARGUMENT",details:"Invalid emaill address: "+e[f]});i.mail(e,{subject:t.subject||"",body:t.body||"",attachments:t.attachments||null},function(e){e=e||{},e.error?(u(e.error),"function"==typeof n&&n(e.error,null)):(o(),"function"==typeof n&&n(null))})})};e.exports={call:u,sms:f,mail:c}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/device/battery"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/device/battery")});var r=function(e){return new Promise(function(t,n){o.status(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})};e.exports={status:r}},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}var r=n(83),i=o(r),u=n(81),f=o(u),c=n(84),s=o(c),a=n(85),l=o(a),p=n(86),d=o(p),y=n(87),_=o(y);e.exports={info:i.default,battery:f.default,network:s.default,screen:l.default,vibration:d.default,volume:_.default}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/device/info"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/device/info")});var r=function(e){return new Promise(function(t,n){o.info(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})};e.exports={info:r}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/device/network"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/device/network")});var r=function(e){return new Promise(function(t,n){o.status(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})};e.exports={status:r}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/device/screen"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/device/screen")});var r={get:function(e){return new Promise(function(t,n){o.getBrightness(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})},set:function(e,t){return new Promise(function(n,r){o.setBrightness(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})}},i={status:function(e){return new Promise(function(t,n){o.getOrientation(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})},lock:function(e,t){return"function"==typeof e&&(t=e,e={}),["portrait-primary","portrait-secondary","landscape-primary","landscape-secondary","portrait","landscape","any"].indexOf(e)<0&&(e="any"),new Promise(function(n,r){o.lockOrientation(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},unlock:function(e){return new Promise(function(t,n){o.unlockOrientation(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})}},u=function(e){return new Promise(function(t,n){o.info(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})};e.exports={brightness:r,orientation:i,info:u}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/device/vibration"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/device/vibration")});var r=function(e,t){return"function"==typeof e&&(t=e,e={}),new Promise(function(n,r){o.vibrate(e||500,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})};e.exports={vibrate:r}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/device/volume"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/device/volume")});var r=function(e){return new Promise(function(t,n){o.get(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})},i=function(e,t){return new Promise(function(n,r){o.set(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})};e.exports={get:r,set:i}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/geolocation"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/geolocation")});var r=function(e,t){return"function"==typeof e&&(t=e,e={}),new Promise(function(e,n){o.get(function(o){o=o||{},o.error?(n(o.error),"function"==typeof t&&t(o.error,null)):(e(o),"function"==typeof t&&t(null,o))})})},i=function(e,t){return"function"==typeof e&&(t=e,e={}),new Promise(function(n,r){o.watch({maximumAge:e.maximumAge||0,timeout:e.timeout||1e4,model:e.model||"highAccuracy"},function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},u=function(e){return new Promise(function(t,n){o.clearWatch(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})};e.exports={get:r,watch:i,clearWatch:u}},function(e,t,n){"use strict";var o={};if(weex&&weex.requireModule||"function"==typeof __weex_define__){var r=n(79),i=n(80),u=n(88),f=n(92),c=n(94),s=n(99),a=n(96),l=n(102),p=n(82),d=n(95);r&&(o.camera=r),i&&(o.call=i.call,o.sms=i.sms,o.mail=i.mail),u&&(o.geolocation=u),f&&(o.audio=f.audio,o.image=f.image,o.video=f.video),s&&(o.recorder=s),c&&(o.alert=c.alert,o.confirm=c.confirm,o.prompt=c.prompt,o.toast=c.toast),a&&(o.fetch=a.stream.fetch,o.download=a.transfer.download,o.upload=a.transfer.upload,o.websocket=a.websocket),l&&(o.accelerometer=l.accelerometer,o.compass=l.compass),p&&(o.device=p.info,o.battery=p.battery,o.network=p.network,o.screen=p.screen,o.vibrate=p.vibration.vibrate,o.volume=p.volume),d&&(o.navigator=d)}e.exports=o},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/media/audio"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/media/audio")});var r=function(e,t){return new Promise(function(n,r){if(!e)return void r({code:110040,message:"MEDIA_MISSING_ARGUMENT"});o.play(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(),"function"==typeof t&&t(null))})})},i=function(e){return new Promise(function(t,n){o.pause(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(),"function"==typeof e&&e(null))})})},u=function(e){return new Promise(function(t,n){o.stop(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(),"function"==typeof e&&e(null))})})};e.exports={play:r,pause:i,stop:u}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/media/image"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/media/image")});var r=function(e,t){return e=e||{},"function"==typeof e&&(t=e,e={}),e.limit=e.limit||1,e.quality=e.quality&&e.quality<100?parseInt(e.quality):100,new Promise(function(n,r){o.pick({limit:e.limit,quality:e.quality,width:e.width||null,height:e.height||null,showCamera:e.showCamera||!1},function(e){null!==e&&(e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e)))})})},i=function(e,t,n){return t=t||{},"function"==typeof t&&(n=t,t={}),new Promise(function(r,i){if(!e)return void i({code:110040,message:"MEDIA_MISSING_ARGUMENT"});"string"==typeof e&&(e=[e]),["dots","label","none"].indexOf(t.style)<0&&(t.style="dots"),"dots"===t.style&&(e.length>9?t.style="label":1===e.length&&(t.style="none")),o.preview(e,{current:t.current,style:t.style},function(e){e=e||{},e.error?(i(e.error),"function"==typeof n&&n(e.error,null)):(r(),"function"==typeof n&&n(null))})})},u=function(e,t){return new Promise(function(n,r){if(!e)return void r({code:110040,message:"MEDIA_MISSING_ARGUMENT"});o.info(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},f=function(e,t){return new Promise(function(n,r){if(!e)return void r({code:110040,message:"MEDIA_MISSING_ARGUMENT"});o.exif(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})};e.exports={pick:r,preview:i,info:u,exif:f}},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}var r=n(90),i=o(r),u=n(91),f=o(u),c=n(93),s=o(c);e.exports={audio:i.default,image:f.default,video:s.default}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/media/video"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/media/video")});var r=function(e,t){return new Promise(function(n,r){if(!e)return void r({code:110040,message:"MEDIA_MISSING_ARGUMENT"});o.play(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(),"function"==typeof t&&t(null))})})},i=function(e){return new Promise(function(t,n){o.pause(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(),"function"==typeof e&&e(null))})})},u=function(e){return new Promise(function(t,n){o.stop(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(),"function"==typeof e&&e(null))})})};e.exports={play:r,pause:i,stop:u}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/modal"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/modal")});var r=function(e,t){return new Promise(function(n,r){"string"==typeof e&&(e={message:e}),e=e||{},o.alert({title:e.title||"",message:e.message||"",okButton:e.okButton||"OK"},function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(),"function"==typeof t&&t(null))})})},i=function(e,t){return new Promise(function(n,r){"string"==typeof e&&(e={message:e}),e=e||{},o.confirm({title:e.title||"",message:e.message||"",okButton:e.okButton||"OK",cancelButton:e.cancelButton||"Cancel"},function(e){void 0===e&&(e={error:"unknow error, please report to natjs team"}),e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},u=function(e,t){return new Promise(function(n,r){"string"==typeof e&&(e={message:e}),e=e||{},o.prompt({title:e.title||"",message:e.message||"",text:e.text||"",okButton:e.okButton||"OK",cancelButton:e.cancelButton||"Cancel"},function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},f=function(e,t){return new Promise(function(n,r){"string"==typeof e&&(e={message:e}),e=e||{},["top","middle","bottom"].indexOf(e.position)<0&&(e.position="bottom"),o.toast({message:e.message||"",duration:e.duration||3e3,position:e.position},function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(),"function"==typeof t&&t(null))})})};e.exports={alert:r,confirm:i,prompt:u,toast:f}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/navigator"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/navigator")});var r=function(e,t){return e=e||{},"string"==typeof e&&(e={url:e}),new Promise(function(n,r){o.push(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},i=function(e,t){return new Promise(function(n,r){o.pop(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},u=function(e,t){return e=e||{},"string"==typeof e&&(e={title:e}),new Promise(function(n,r){o.setTitle(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},f=function(e,t){return e=e||{},"string"==typeof e&&(e={color:e}),new Promise(function(n,r){o.setColor(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},c=function(e,t){return e=e||{},"string"==typeof e&&(e={backgroundColor:e}),new Promise(function(n,r){o.setBackgroundColor(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},s=function(e,t){return e=e||{},"string"!=typeof e&&"number"!=typeof e||(e={fontSize:e}),new Promise(function(n,r){o.setFontSize(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},a=function(e,t){return e=e||{},new Promise(function(n,r){o.init(e,function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},l=function(e){return new Promise(function(t,n){o.hide(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})},p=function(e){return new Promise(function(t,n){o.show(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})};e.exports={push:r,pop:i,setTitle:u,setColor:f,setBackgroundColor:c,setFontSize:s,init:a,hide:l,show:p}},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}var r=n(97),i=o(r),u=n(98),f=o(u);e.exports={stream:i.default,transfer:f.default}},function(e,t,n){"use strict";var o="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},r=void 0;weex&&weex.requireModule?r=weex.requireModule("nat/stream"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){r=e("@weex-module/nat/stream")});var i=function(e,t,n){return new Promise(function(i,u){if(!e)return void u({code:151040,message:"FETCH_MISSING_ARGUMENT"});if("object"===(void 0===e?"undefined":o(e))?(n=t,t=e):"function"==typeof t?(n=t,t={url:e}):(t=t||{},t.url=e),t.headers=t.headers||{},t.headers["Content-Type"]&&/application\/json/.test(t.headers["Content-Type"])&&(t.type="json"),t.method=t.method?t.method.toUpperCase():"GET",["GET","POST","PUT","PATCH","DELETE","HEAD"].indexOf(t.method)<0)return void u({code:151050,message:"FETCH_INVALID_ARGUMENT",details:"Unsupported request method"});if(t.type=t.type?t.type.toLowerCase():"json",["json","jsonp","text"].indexOf(t.type)<0)return void u({code:151050,message:"FETCH_INVALID_ARGUMENT",details:"Unsupported request type"});if("object"===o(t.body)){if("json"!==t.type||"GET"===t.method)return void u({code:151050,message:"FETCH_INVALID_ARGUMENT",details:"Request body must be a string"});t.body=JSON.stringify(t.body)}r.fetch({method:t.method,url:t.url,headers:t.headers,type:t.type,body:t.body},function(e){if(e=e||{},e.error)u(e.error),"function"==typeof n&&n(e.error,null);else{if(e.ok&&"string"==typeof e.data)switch(t.type){case"json":e.data=JSON.parse(e.data);break;case"jsonp":var o=e.data.match(/^\s*?.*\((.*)\)\s*?$/);o&&(e.data=JSON.parse(o[1]))}i(e),"function"==typeof n&&n(null,e)}})})};e.exports={fetch:i}},function(e,t,n){"use strict";var o="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},r=void 0;weex&&weex.requireModule?r=weex.requireModule("nat/transfer"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){r=e("@weex-module/nat/transfer")});var i=function(e,t,n,i){return new Promise(function(u,f){if(!e)return void f({code:151040,message:"DOWNLOAD_MISSING_ARGUMENT"});"function"==typeof t?i=t:"object"===(void 0===t?"undefined":o(t))&&("function"==typeof n&&(i=n),"function"==typeof t.onProgress&&(n=t)),"object"===(void 0===e?"undefined":o(e))?t=e:(t=t||{},t.url=e),n=n||{},r.download({url:t.url,headers:t.headers||{},target:t.target},function(e){console.log("[nat]",e),e=e||{},e.error?(f(e.error),"function"==typeof i&&i(e.error,null)):e.progress?"function"==typeof n.onProgress&&n.onProgress(e.progress):(u(e),"function"==typeof i&&i(null,e))})})},u=function(e,t,n,i){return new Promise(function(u,f){return e?("function"==typeof t?i=t:"object"===(void 0===t?"undefined":o(t))&&("function"==typeof n&&(i=n),"function"==typeof t.onProgress&&(n=t)),"object"===(void 0===e?"undefined":o(e))?t=e:(t=t||{},t.url=e),n=n||{},t.path?(t.method=t.method?t.method.toUpperCase():"POST",["POST","PUT","PATCH"].indexOf(t.method)<0?void f({code:151050,message:"UPLOAD_INVALID_ARGUMENT",details:"Unsupported request method"}):void r.upload({url:t.url,method:t.method,path:t.path,name:t.name,headers:t.headers||{},formData:t.formData||{},mimeType:t.mimeType},function(e){console.log("[nat]",e),e=e||{},e.error?(f(e.error),"function"==typeof i&&i(e.error,null)):e.progress?"function"==typeof n.onProgress&&n.onProgress(e.progress):(u(e),"function"==typeof i&&i(null,e))})):void f({code:151040,message:"UPLOAD_MISSING_ARGUMENT"})):void f({code:151040,message:"UPLOAD_MISSING_ARGUMENT"})})};e.exports={download:i,upload:u}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/recorder"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/recorder")});var r=function(e,t){return e=e||{},"function"==typeof e&&(t=e,e={}),new Promise(function(n,r){["stereo","mono"].indexOf(e.channel)<0&&(e.channel="stereo"),["low","standard","high"].indexOf(e.quality)<0&&(e.quality="standard"),o.start({channel:e.channel,quality:e.quality},function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(),"function"==typeof t&&t(null))})})},i=function(e){return new Promise(function(t,n){o.pause(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(),"function"==typeof e&&e(null))})})},u=function(e){return new Promise(function(t,n){o.stop(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})};e.exports={start:r,pause:i,stop:u}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/sensor/accelerometer"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/sensor/accelerometer")});var r=function(e,t){return"function"==typeof e&&(t=e,e={}),new Promise(function(e,n){o.get(function(o){o=o||{},o.error?(n(o.error),"function"==typeof t&&t(o.error,null)):(e(o),"function"==typeof t&&t(null,o))})})},i=function(e,t){return"function"==typeof e&&(t=e,e={}),new Promise(function(n,r){o.watch({interval:e.interval||32},function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},u=function(e){return new Promise(function(t,n){o.clearWatch(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})};e.exports={get:r,watch:i,clearWatch:u}},function(e,t,n){"use strict";var o=void 0;weex&&weex.requireModule?o=weex.requireModule("nat/sensor/compass"):"function"==typeof __weex_define__&&__weex_define__("@weex-temp/x",function(e){o=e("@weex-module/nat/sensor/compass")});var r=function(e,t){return"function"==typeof e&&(t=e,e={}),new Promise(function(e,n){o.get(function(o){o=o||{},o.error?(n(o.error),"function"==typeof t&&t(o.error,null)):(e(o),"function"==typeof t&&t(null,o))})})},i=function(e,t){return"function"==typeof e&&(t=e,e={}),new Promise(function(n,r){o.watch({interval:e.interval||32},function(e){e=e||{},e.error?(r(e.error),"function"==typeof t&&t(e.error,null)):(n(e),"function"==typeof t&&t(null,e))})})},u=function(e){return new Promise(function(t,n){o.clearWatch(function(o){o=o||{},o.error?(n(o.error),"function"==typeof e&&e(o.error,null)):(t(o),"function"==typeof e&&e(null,o))})})};e.exports={get:r,watch:i,clearWatch:u}},function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}var r=n(100),i=o(r),u=n(101),f=o(u);e.exports={accelerometer:i.default,compass:f.default}},function(e,t,n){"use strict";var o=function(e){return"function"==typeof e},r=function(e){if("number"==typeof e)e=e.toString();else if("string"!=typeof e)return!1;return/^\+?[\d\-\#\*\.\(\)]+$/.test(e)},i=function(e){return"string"==typeof e&&/^(\w)+([\.\-\_]\w+)*@(\w)+(([\.\-\_]\w+)+)$/.test(e)};e.exports={isFn:o,isPhone:r,isEmail:i}},function(e,t,n){var o,r,i=[];i.push(n(74)),o=n(72);var u=n(76);r=o=o||{},"object"!=typeof o.default&&"function"!=typeof o.default||(Object.keys(o).some(function(e){return"default"!==e&&"__esModule"!==e})&&console.error("named exports are not supported in *.vue files."),r=o=o.default),"function"==typeof r&&(r=r.options),r.__file="/Users/Acathur/Development/Nat/nat-example/src/layout/nav-bar.vue",r.render=u.render,r.staticRenderFns=u.staticRenderFns,r._scopeId="data-v-2e34cfd9",r.style=r.style||{},i.forEach(function(e){for(var t in e)r.style[t]=e[t]}),"function"==typeof __register_static_styles__&&__register_static_styles__(r._scopeId,i),e.exports=o},function(e,t,n){var o,r,i=[];i.push(n(75)),o=n(73);var u=n(77);r=o=o||{},"object"!=typeof o.default&&"function"!=typeof o.default||(Object.keys(o).some(function(e){return"default"!==e&&"__esModule"!==e})&&console.error("named exports are not supported in *.vue files."),r=o=o.default),"function"==typeof r&&(r=r.options),r.__file="/Users/Acathur/Development/Nat/nat-example/src/layout/title-bar.vue",r.render=u.render,r.staticRenderFns=u.staticRenderFns,r._scopeId="data-v-2ef763e4",r.style=r.style||{},i.forEach(function(e){for(var t in e)r.style[t]=e[t]}),"function"==typeof __register_static_styles__&&__register_static_styles__(r._scopeId,i),e.exports=o},,,,,,,,,,function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o=n(89),r=n.n(o),i=n(78),u=n.n(i),f=n(104),c=n.n(f),s=n(105),a=n.n(s);t.default={name:"mail",data:function(){return{name:"Mail"}},components:{StatusBar:u.a,NavBar:c.a,TitleBar:a.a},methods:{mail:function(){r.a.mail("hi@natjs.com")},mailMulti:function(){r.a.mail(["hi@natjs.com","push@natjs.com"])},callWithContnCb:function(){r.a.mail("hi@natjs.com",{subject:"Subject",body:"content goes here."},function(){r.a.toast("email popup")})}}}},,,,,,,,,,,,,,,,,,,,,,,,function(e,t){e.exports={"c-primary":{color:"#3D83FB"},"c-ink":{color:"#333333"},"fz-24":{fontSize:24},"fz-32":{fontSize:32},"fz-72":{fontSize:72},"bottom-line":{borderBottomWidth:1,borderBottomStyle:"solid",borderBottomColor:"#dddddd"},button:{backgroundImage:"linear-gradient(to bottom, #3D83FB, #3370FF)",height:84,paddingLeft:64,paddingRight:64,borderRadius:42,border:0,outline:0,alignItems:"center",justifyContent:"center"},"button-txt":{fontSize:32,fontWeight:"600",color:"#ffffff"},content:{paddingLeft:48,paddingRight:48},case:{marginBottom:36},header:{height:94,flexDirection:"row",alignItems:"center"},dot:{backgroundColor:"#3D83FB",width:16,height:16,borderRadius:8,marginRight:16},title:{fontSize:32,fontWeight:"700"},code:{fontSize:24,color:"#555555",backgroundColor:"#f7f7f7",borderRadius:8,paddingLeft:36,paddingRight:36,paddingTop:32,paddingBottom:32,width:654}}},,,,,,,,,,,,,,,,,,,,,,,,,,function(e,t){e.exports={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",[n("status-bar"),n("nav-bar"),n("scroller",{staticClass:["content"],attrs:{showScrollbar:!1}},[n("title-bar",{attrs:{title:e.name}}),n("div",{staticClass:["case"],on:{click:e.mail}},[e._m(0),n("text",{staticClass:["code"]},[e._v("Nat.mail('hi@natjs.com')")])]),n("div",{staticClass:["case"],on:{click:e.mailMulti}},[e._m(1),n("text",{staticClass:["code"]},[e._v("Nat.mail(['hi@natjs.com', 'push@natjs.com'])")])]),n("div",{staticClass:["case"],on:{click:e.callWithContnCb}},[e._m(2),n("text",{staticClass:["code"]},[e._v("Nat.mail('hi@natjs.com', {\n\tsubject: 'Subject',\n\tbody: 'content goes here.'\n}, () => {\n\tNat.toast('email popup')\n})")])])],1)],1)},staticRenderFns:[function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:["header"]},[n("div",{staticClass:["dot"]}),n("text",{staticClass:["title"]},[e._v("Simple Mail")])])},function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:["header"]},[n("div",{staticClass:["dot"]}),n("text",{staticClass:["title"]},[e._v("Multiple recipients")])])},function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:["header"]},[n("div",{staticClass:["dot"]}),n("text",{staticClass:["title"]},[e._v("Mail with content and callback")])])}]},e.exports.render._withStripped=!0},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,function(e,t,n){var o,r,i=[];i.push(n(139)),o=n(115);var u=n(165);r=o=o||{},"object"!=typeof o.default&&"function"!=typeof o.default||(Object.keys(o).some(function(e){return"default"!==e&&"__esModule"!==e})&&console.error("named exports are not supported in *.vue files."),r=o=o.default),"function"==typeof r&&(r=r.options),r.__file="/Users/Acathur/Development/Nat/nat-example/src/views/communication/mail.vue",r.render=u.render,r.staticRenderFns=u.staticRenderFns,r._scopeId="data-v-109527b4",r.style=r.style||{},i.forEach(function(e){for(var t in e)r.style[t]=e[t]}),"function"==typeof __register_static_styles__&&__register_static_styles__(r._scopeId,i),e.exports=o,e.exports.el="true",new Vue(e.exports)}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 65);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+	return typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+} : function (obj) {
+	return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+};
+
+var isNative = (typeof window === 'undefined' ? 'undefined' : _typeof(window)) !== 'object';
+
+var isFn = function isFn(fn) {
+	return typeof fn === 'function';
+};
+
+var isPhone = function isPhone(str) {
+	if (typeof str === 'number') {
+		str = str.toString();
+	} else if (typeof str !== 'string') {
+		return false;
+	}
+
+	return (/^\+?[\d\-\#\*\.\(\)]+$/.test(str)
+	);
+};
+
+var isEmail = function isEmail(str) {
+	if (typeof str !== 'string') {
+		return false;
+	}
+
+	return (/^(\w)+([\.\-\_]\w+)*@(\w)+(([\.\-\_]\w+)+)$/.test(str)
+	);
+};
+
+module.exports = {
+	isNative: isNative,
+	isFn: isFn,
+	isPhone: isPhone,
+	isEmail: isEmail
+};
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var env = {
+	isNative: (typeof window === 'undefined' ? 'undefined' : _typeof(window)) !== 'object',
+	platform: weex.config.env.platform,
+	deviceWidth: weex.config.env.deviceWidth,
+	deviceHeight: weex.config.env.deviceHeight,
+	cdnUri: 'http://cdn.instapp.io/nat/',
+
+	get baseUrl() {
+		var url = void 0;
+		var bundleUrl = weex.config.bundleUrl;
+		var isAndroid = bundleUrl.indexOf('file://assets/') > -1;
+		var isiOS = bundleUrl.indexOf('file:///') > -1;
+
+		if (isAndroid) {
+			url = 'file://assets/dist/';
+		} else if (isiOS) {
+			url = bundleUrl.substring(0, bundleUrl.lastIndexOf('/') + 1);
+		} else {
+			var host = 'localhost:8080';
+			var matches = /\/\/([^\/]+?)\//.exec(bundleUrl);
+			host = matches && matches.length >= 2 ? matches[1] : host;
+			url = 'http://' + host + '/dist/';
+		}
+
+		return url;
+	}
+};
+
+exports.default = env;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "bar": {
+    "width": "750",
+    "height": "40",
+    "backgroundColor": "#ffffff"
+  },
+  "bar-x": {
+    "width": "750",
+    "height": "40",
+    "backgroundColor": "#ffffff"
+  }
+}
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _env = __webpack_require__(1);
+
+var _env2 = _interopRequireDefault(_env);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+	name: 'status-bar',
+
+	data: function data() {
+		return {
+			platform: _env2.default.platform,
+			style: {
+				backgroundColor: this.backgroundColor
+			}
+		};
+	},
+
+
+	computed: {
+		isX: function isX() {
+			return _env2.default.platform === 'iOS' && _env2.default.deviceWidth === 1125 && _env2.default.deviceHeight === 2436;
+		}
+	},
+
+	props: {
+		backgroundColor: {
+			type: String,
+			default: '#fff'
+		},
+		show: {
+			type: Boolean,
+			default: true
+		}
+	}
+}; //
+//
+//
+//
+//
+//
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return (_vm.show && _vm.platform === 'iOS') ? _c('div', {
+    attrs: {
+      "id": "status-bar"
+    }
+  }, [(_vm.isX) ? _c('div', {
+    staticClass: ["bar-x"],
+    style: _vm.style
+  }) : _vm._e(), _c('div', {
+    staticClass: ["bar"],
+    style: _vm.style
+  })]) : _vm._e()
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(2)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(3)
+
+/* template */
+var __vue_template__ = __webpack_require__(4)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/acathur/Developments/nat/nat-explorer/src/layout/status-bar.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-1dc6752c"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "navbar": {
+    "width": "750",
+    "height": "88",
+    "backgroundColor": "#ffffff"
+  },
+  "back": {
+    "width": "186",
+    "height": "88",
+    "paddingLeft": "12",
+    "paddingRight": "12",
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "arrow": {
+    "width": "40",
+    "height": "40",
+    "marginRight": "2"
+  },
+  "back-txt": {
+    "color": "#3D83FB",
+    "fontSize": "34",
+    "lineHeight": "34",
+    "paddingTop": "3",
+    "paddingBottom": "3",
+    "height": "40"
+  }
+}
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _env = __webpack_require__(1);
+
+var _env2 = _interopRequireDefault(_env);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var navigator = weex.requireModule('navigator'); //
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+	name: 'nav-bar',
+
+	data: function data() {
+		return {
+			cdnUri: _env2.default.cdnUri
+		};
+	},
+
+
+	methods: {
+		pop: function pop() {
+			navigator.pop();
+		}
+	}
+};
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["navbar"]
+  }, [_c('div', {
+    staticClass: ["back"],
+    on: {
+      "click": _vm.pop
+    }
+  }, [_c('image', {
+    staticClass: ["arrow"],
+    attrs: {
+      "src": _vm.cdnUri + 'back_arrow.png'
+    }
+  }), _c('text', {
+    staticClass: ["back-txt"]
+  }, [_vm._v("Back")])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "title": {
+    "fontSize": "72",
+    "fontWeight": "bold",
+    "lineHeight": "72",
+    "height": "100",
+    "paddingTop": "14",
+    "paddingBottom": "14",
+    "marginTop": "8",
+    "marginBottom": "32"
+  }
+}
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+	name: 'title-bar',
+
+	data: function data() {
+		return {};
+	},
+
+
+	props: {
+		title: {
+			type: String,
+			required: true
+		}
+	}
+};
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('text', {
+    staticClass: ["title"]
+  }, [_vm._v(_vm._s(_vm.title))])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var Nat = {};
+
+if (weex && weex.requireModule || typeof __weex_define__ === 'function') {
+	var camera = __webpack_require__(13);
+	var communication = __webpack_require__(14);
+	var geolocation = __webpack_require__(15);
+	var media = __webpack_require__(16);
+	var modal = __webpack_require__(20);
+	var recorder = __webpack_require__(21);
+	var network = __webpack_require__(22);
+	var sensor = __webpack_require__(25);
+	var device = __webpack_require__(28);
+	var Navigator = __webpack_require__(35);
+	var alipay = __webpack_require__(36);
+	var wechat = __webpack_require__(37);
+
+	// camera
+	if (camera) {
+		Nat.camera = camera;
+	}
+
+	// communication
+	if (communication) {
+		Nat.call = communication.call;
+		Nat.sms = communication.sms;
+		Nat.mail = communication.mail;
+	}
+
+	// geolocation
+	if (geolocation) {
+		Nat.geolocation = geolocation;
+	}
+
+	// media
+	if (media) {
+		Nat.audio = media.audio;
+		Nat.image = media.image;
+		Nat.video = media.video;
+	}
+
+	// recorder
+	if (recorder) {
+		Nat.recorder = recorder;
+	}
+
+	// modal
+	if (modal) {
+		Nat.alert = modal.alert;
+		Nat.confirm = modal.confirm;
+		Nat.prompt = modal.prompt;
+		Nat.toast = modal.toast;
+		Nat.actionSheet = modal.actionSheet;
+	}
+
+	// network
+	if (network) {
+		Nat.fetch = network.stream.fetch;
+		Nat.download = network.transfer.download;
+		Nat.upload = network.transfer.upload;
+		Nat.websocket = network.websocket;
+	}
+
+	// sensor
+	if (sensor) {
+		Nat.accelerometer = sensor.accelerometer;
+		Nat.compass = sensor.compass;
+	}
+
+	// device
+	if (device) {
+		Nat.device = device.info;
+		Nat.battery = device.battery;
+		Nat.network = device.network;
+		Nat.screen = device.screen;
+		Nat.vibrate = device.vibration.vibrate;
+		Nat.volume = device.volume;
+	}
+
+	// navigator
+	if (Navigator) {
+		Nat.navigator = Navigator;
+	}
+
+	// alipay
+	if (alipay) {
+		Nat.alipay = alipay;
+	}
+
+	// wechat
+	if (wechat) {
+		Nat.wechat = wechat;
+	}
+}
+
+module.exports = Nat;
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var camera = void 0;
+
+if (weex && weex.requireModule) {
+	camera = weex.requireModule('nat/camera');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		camera = __weex_require__('@weex-module/nat/camera');
+	});
+}
+
+// launch
+
+var launch = function launch(opts) {
+	camera.launch();
+};
+
+// captureImage (snap)
+
+var captureImage = function captureImage(opts, cb) {
+	opts = opts || {};
+
+	return new Promise(function (resolve, reject) {
+		camera.captureImage({
+			width: opts.width || null,
+			height: opts.height || null
+		}, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// captureVideo (record)
+
+var captureVideo = function captureVideo(opts, cb) {
+	opts = opts || {};
+
+	return new Promise(function (resolve, reject) {
+		camera.captureVideo({
+			width: opts.width || null,
+			height: opts.height || null
+		}, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	launch: launch,
+	captureImage: captureImage,
+	captureVideo: captureVideo
+};
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _utils = __webpack_require__(0);
+
+var _utils2 = _interopRequireDefault(_utils);
+
+function _interopRequireDefault(obj) {
+	return obj && obj.__esModule ? obj : { default: obj };
+}
+
+var communication = void 0;
+
+if (weex && weex.requireModule) {
+	communication = weex.requireModule('nat/communication');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		communication = __weex_require__('@weex-module/nat/communication');
+	});
+}
+
+// call
+
+var call = function call(to, cb) {
+	return new Promise(function (resolve, reject) {
+		if (!to) {
+			reject({
+				code: 101040,
+				message: 'CALL_MISSING_ARGUMENT'
+			});
+			return;
+		} else if (!_utils2.default.isPhone(to)) {
+			reject({
+				code: 101050,
+				message: 'CALL_INVALID_ARGUMENT',
+				details: 'Invalid phone number: ' + to
+			});
+			return;
+		}
+
+		communication.call(to, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve();
+				if (typeof cb === 'function') cb(null);
+			}
+		});
+	});
+};
+
+// sms
+
+var sms = function sms(to, text, cb) {
+	text = text || '';
+
+	if (typeof text === 'function') {
+		cb = text;
+		text = '';
+	}
+
+	return new Promise(function (resolve, reject) {
+		if (!to) {
+			reject({
+				code: 102040,
+				message: 'SMS_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		if (typeof to === 'string') {
+			to = [to];
+		}
+
+		for (var i = 0; i < to.length; i++) {
+			if (!_utils2.default.isPhone(to[i])) {
+				reject({
+					code: 102050,
+					message: 'SMS_INVALID_ARGUMENT'
+				});
+				return;
+			}
+		}
+
+		communication.sms(to, text, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve();
+				if (typeof cb === 'function') cb(null);
+			}
+		});
+	});
+};
+
+// mail
+
+var mail = function mail(to, opts, cb) {
+	opts = opts || {};
+
+	if (typeof opts === 'function') {
+		cb = opts;
+		opts = {};
+	}
+
+	return new Promise(function (resolve, reject) {
+		if (!to) {
+			reject({
+				code: 103040,
+				message: 'MAIL_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		if (typeof to === 'string') {
+			to = [to];
+		}
+
+		for (var i = 0; i < to.length; i++) {
+			if (!_utils2.default.isEmail(to[i])) {
+				reject({
+					code: 103050,
+					message: 'MAIL_INVALID_ARGUMENT',
+					details: 'Invalid emaill address: ' + to[i]
+				});
+				return;
+			}
+		}
+
+		communication.mail(to, {
+			subject: opts.subject || '',
+			body: opts.body || '',
+			attachments: opts.attachments || null
+		}, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve();
+				if (typeof cb === 'function') cb(null);
+			}
+		});
+	});
+};
+
+module.exports = {
+	call: call,
+	sms: sms,
+	mail: mail
+};
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var geolocation = void 0;
+
+if (weex && weex.requireModule) {
+	geolocation = weex.requireModule('nat/geolocation');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		geolocation = __weex_require__('@weex-module/nat/geolocation');
+	});
+}
+
+// get
+var get = function get(opts, cb) {
+	if (typeof opts === 'function') {
+		cb = opts;
+		opts = {};
+	}
+
+	return new Promise(function (resolve, reject) {
+		geolocation.get(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// watch
+
+var watch = function watch(opts, cb) {
+	if (typeof opts === 'function') {
+		cb = opts;
+		opts = {};
+	}
+
+	return new Promise(function (resolve, reject) {
+		geolocation.watch({
+			maximumAge: opts.maximumAge || 0,
+			timeout: opts.timeout || 10000,
+			model: opts.model || 'highAccuracy'
+		}, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// clear watch
+
+var clearWatch = function clearWatch(cb) {
+	return new Promise(function (resolve, reject) {
+		geolocation.clearWatch(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	get: get,
+	watch: watch,
+	clearWatch: clearWatch
+};
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _audio = __webpack_require__(17);
+
+var _audio2 = _interopRequireDefault(_audio);
+
+var _image = __webpack_require__(18);
+
+var _image2 = _interopRequireDefault(_image);
+
+var _video = __webpack_require__(19);
+
+var _video2 = _interopRequireDefault(_video);
+
+function _interopRequireDefault(obj) {
+	return obj && obj.__esModule ? obj : { default: obj };
+}
+
+module.exports = {
+	audio: _audio2.default,
+	image: _image2.default,
+	video: _video2.default
+};
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var audio = void 0;
+
+if (weex && weex.requireModule) {
+	audio = weex.requireModule('nat/media/audio');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		audio = __weex_require__('@weex-module/nat/media/audio');
+	});
+}
+
+// play
+var play = function play(path, cb) {
+	return new Promise(function (resolve, reject) {
+		if (!path) {
+			reject({
+				code: 110040,
+				message: 'MEDIA_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		audio.play(path, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve();
+				if (typeof cb === 'function') cb(null);
+			}
+		});
+	});
+};
+
+// pause
+
+var pause = function pause(cb) {
+	return new Promise(function (resolve, reject) {
+		audio.pause(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve();
+				if (typeof cb === 'function') cb(null);
+			}
+		});
+	});
+};
+
+// stop
+
+var stop = function stop(cb) {
+	return new Promise(function (resolve, reject) {
+		audio.stop(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve();
+				if (typeof cb === 'function') cb(null);
+			}
+		});
+	});
+};
+
+module.exports = {
+	play: play,
+	pause: pause,
+	stop: stop
+};
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var image = void 0;
+
+if (weex && weex.requireModule) {
+	image = weex.requireModule('nat/media/image');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		image = __weex_require__('@weex-module/nat/media/image');
+	});
+}
+
+// pick
+var pick = function pick(opts, cb) {
+	opts = opts || {};
+
+	if (typeof opts === 'function') {
+		cb = opts;
+		opts = {};
+	}
+
+	opts.limit = opts.limit || 1;
+	opts.quality = opts.quality && opts.quality < 100 ? parseInt(opts.quality) : 100;
+
+	return new Promise(function (resolve, reject) {
+		image.pick({
+			limit: opts.limit,
+			quality: opts.quality,
+			width: opts.width || null,
+			height: opts.height || null,
+			showCamera: opts.showCamera || false
+		}, function (ret) {
+			if (ret === null) {
+				return;
+			}
+
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// preview
+
+var preview = function preview(files, opts, cb) {
+	opts = opts || {};
+
+	if (typeof opts === 'function') {
+		cb = opts;
+		opts = {};
+	}
+
+	return new Promise(function (resolve, reject) {
+		if (!files) {
+			reject({
+				code: 110040,
+				message: 'MEDIA_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		if (typeof files === 'string') {
+			files = [files];
+		}
+
+		// style
+		if (['dots', 'label', 'none'].indexOf(opts.style) < 0) {
+			opts.style = 'dots';
+		}
+
+		if (opts.style === 'dots') {
+			if (files.length > 9) {
+				opts.style = 'label';
+			} else if (files.length === 1) {
+				opts.style = 'none';
+			}
+		}
+
+		image.preview(files, {
+			current: opts.current,
+			style: opts.style
+		}, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve();
+				if (typeof cb === 'function') cb(null);
+			}
+		});
+	});
+};
+
+// info
+
+var info = function info(path, cb) {
+	return new Promise(function (resolve, reject) {
+		if (!path) {
+			reject({
+				code: 110040,
+				message: 'MEDIA_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		image.info(path, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// exif
+
+var exif = function exif(path, cb) {
+	return new Promise(function (resolve, reject) {
+		if (!path) {
+			reject({
+				code: 110040,
+				message: 'MEDIA_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		image.exif(path, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	pick: pick,
+	preview: preview,
+	info: info,
+	exif: exif
+};
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var video = void 0;
+
+if (weex && weex.requireModule) {
+	video = weex.requireModule('nat/media/video');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		video = __weex_require__('@weex-module/nat/media/video');
+	});
+}
+
+// play
+var play = function play(path, cb) {
+	return new Promise(function (resolve, reject) {
+		if (!path) {
+			reject({
+				code: 110040,
+				message: 'MEDIA_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		video.play(path, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve();
+				if (typeof cb === 'function') cb(null);
+			}
+		});
+	});
+};
+
+// pause
+
+var pause = function pause(cb) {
+	return new Promise(function (resolve, reject) {
+		video.pause(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve();
+				if (typeof cb === 'function') cb(null);
+			}
+		});
+	});
+};
+
+// stop
+
+var stop = function stop(cb) {
+	return new Promise(function (resolve, reject) {
+		video.stop(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve();
+				if (typeof cb === 'function') cb(null);
+			}
+		});
+	});
+};
+
+module.exports = {
+	play: play,
+	pause: pause,
+	stop: stop
+};
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+	return typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+} : function (obj) {
+	return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+};
+
+var _utils = __webpack_require__(0);
+
+var modal = void 0;
+
+if (weex && weex.requireModule) {
+	modal = weex.requireModule('nat/modal');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		modal = __weex_require__('@weex-module/nat/modal');
+	});
+}
+// alert
+
+var Alert = function Alert(opts, cb) {
+	return new Promise(function (resolve, reject) {
+		if (typeof opts === 'string') {
+			opts = {
+				message: opts
+			};
+		}
+
+		opts = opts || {};
+
+		if (_utils.isNative) {
+			modal.alert({
+				title: opts.title || '',
+				message: opts.message || '',
+				okButton: opts.okButton || 'OK'
+			}, function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					resolve();
+					if (typeof cb === 'function') cb(null);
+				}
+			});
+		} else {
+			window.alert(opts.message);
+			resolve();
+		}
+	});
+};
+
+// confirm
+
+var Confirm = function Confirm(opts, cb) {
+	return new Promise(function (resolve, reject) {
+		if (typeof opts === 'string') {
+			opts = {
+				message: opts
+			};
+		}
+
+		opts = opts || {};
+
+		if (_utils.isNative) {
+			modal.confirm({
+				title: opts.title || '',
+				message: opts.message || '',
+				okButton: opts.okButton || 'OK',
+				cancelButton: opts.cancelButton || 'Cancel'
+			}, function (ret) {
+				if (typeof ret === 'undefined') {
+					ret = {
+						error: 'unknow error, please report to natjs team'
+					};
+				}
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		} else {
+			var c = window.confirm(opts.message);
+			resolve(c);
+		}
+	});
+};
+
+// prompt
+
+var Prompt = function Prompt(opts, cb) {
+	return new Promise(function (resolve, reject) {
+		if (typeof opts === 'string') {
+			opts = {
+				message: opts
+			};
+		}
+
+		opts = opts || {};
+
+		if (_utils.isNative) {
+			modal.prompt({
+				title: opts.title || '',
+				message: opts.message || '',
+				text: opts.text || '',
+				okButton: opts.okButton || 'OK',
+				cancelButton: opts.cancelButton || 'Cancel'
+			}, function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		} else {
+			var p = window.prompt(opts.message || '', opts.text || '');
+
+			resolve({
+				result: p && p.length,
+				data: p
+			});
+		}
+	});
+};
+
+// toast
+
+var Toast = function Toast(opts, cb) {
+	return new Promise(function (resolve, reject) {
+		if (typeof opts === 'string') {
+			opts = {
+				message: opts
+			};
+		}
+
+		opts = opts || {};
+
+		// position
+		if (['top', 'middle', 'bottom'].indexOf(opts.position) < 0) {
+			opts.position = 'bottom';
+		}
+
+		if (_utils.isNative) {
+			modal.toast({
+				message: opts.message || '',
+				duration: opts.duration || 3000,
+				position: opts.position
+			}, function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					resolve();
+					if (typeof cb === 'function') cb(null);
+				}
+			});
+		} else {
+			window.alert(opts.message);
+			resolve();
+		}
+	});
+};
+
+var actionSheet = {
+	show: function show(opts, cb) {
+		return new Promise(function (resolve, reject) {
+			opts = opts || {};
+
+			if (!Array.isArray(opts.options) || !opts.options.length) {
+				reject({
+					code: 145050,
+					message: 'ACTIONSHEET_INVALID_ARGUMENT'
+				});
+				return;
+			}
+
+			var options = opts.options.map(function (item) {
+				if (['string', 'number'].includes(typeof item === 'undefined' ? 'undefined' : _typeof(item))) {
+					return {
+						title: item
+					};
+				}
+				return item;
+			});
+
+			if (_utils.isNative) {
+				modal.showActionSheet({
+					title: opts.title,
+					options: options
+				}, function (ret) {
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				});
+			} else {
+				resolve();
+			}
+		});
+	}
+};
+
+module.exports = {
+	alert: Alert,
+	confirm: Confirm,
+	prompt: Prompt,
+	toast: Toast,
+	actionSheet: actionSheet
+};
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var recorder = void 0;
+
+if (weex && weex.requireModule) {
+	recorder = weex.requireModule('nat/recorder');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		recorder = __weex_require__('@weex-module/nat/recorder');
+	});
+}
+
+// start
+var start = function start(opts, cb) {
+	opts = opts || {};
+
+	if (typeof opts === 'function') {
+		cb = opts;
+		opts = {};
+	}
+
+	return new Promise(function (resolve, reject) {
+		// channel
+		if (['stereo', 'mono'].indexOf(opts.channel) < 0) {
+			opts.channel = 'stereo';
+		}
+
+		// quality
+		if (['low', 'standard', 'high'].indexOf(opts.quality) < 0) {
+			opts.quality = 'standard';
+		}
+
+		recorder.start({
+			channel: opts.channel,
+			quality: opts.quality
+		}, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve();
+				if (typeof cb === 'function') cb(null);
+			}
+		});
+	});
+};
+
+// pause
+
+var pause = function pause(cb) {
+	return new Promise(function (resolve, reject) {
+		recorder.pause(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve();
+				if (typeof cb === 'function') cb(null);
+			}
+		});
+	});
+};
+
+// stop
+
+var stop = function stop(cb) {
+	return new Promise(function (resolve, reject) {
+		recorder.stop(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	start: start,
+	pause: pause,
+	stop: stop
+};
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _stream = __webpack_require__(23);
+
+var _stream2 = _interopRequireDefault(_stream);
+
+var _transfer = __webpack_require__(24);
+
+var _transfer2 = _interopRequireDefault(_transfer);
+
+function _interopRequireDefault(obj) {
+	return obj && obj.__esModule ? obj : { default: obj };
+}
+
+// import websocket from './websocket'
+// import info from './info'
+
+module.exports = {
+	stream: _stream2.default,
+	transfer: _transfer2.default
+	// websocket,
+	// info
+};
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+	return typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+} : function (obj) {
+	return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+};
+
+var _utils = __webpack_require__(0);
+
+var stream = void 0;
+
+if (weex && weex.requireModule) {
+	stream = weex.requireModule('nat/stream');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		stream = __weex_require__('@weex-module/nat/stream');
+	});
+}
+
+// fetch
+
+var Fetch = function Fetch(url, opts, cb) {
+	return new Promise(function (resolve, reject) {
+		if (!url) {
+			reject({
+				code: 151040,
+				message: 'FETCH_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		if ((typeof url === 'undefined' ? 'undefined' : _typeof(url)) === 'object') {
+			cb = opts;
+			opts = url;
+		} else if (typeof opts === 'function') {
+			cb = opts;
+			opts = {
+				url: url
+			};
+		} else {
+			opts = opts || {};
+			opts.url = url;
+		}
+
+		// headers
+		opts.headers = opts.headers || {};
+
+		if (opts.headers['Content-Type'] && /application\/json/.test(opts.headers['Content-Type'])) {
+			opts.type = 'json';
+		}
+
+		// method
+		opts.method = opts.method ? opts.method.toUpperCase() : 'GET';
+
+		if (['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD'].indexOf(opts.method) < 0) {
+			reject({
+				code: 151050,
+				message: 'FETCH_INVALID_ARGUMENT',
+				details: 'Unsupported request method'
+			});
+			return;
+		}
+
+		// type
+		opts.type = opts.type ? opts.type.toLowerCase() : 'json';
+
+		if (['json', 'jsonp', 'text'].indexOf(opts.type) < 0) {
+			reject({
+				code: 151050,
+				message: 'FETCH_INVALID_ARGUMENT',
+				details: 'Unsupported request type'
+			});
+			return;
+		}
+
+		// body
+		if (_typeof(opts.body) === 'object') {
+			if (opts.type === 'json' && opts.method !== 'GET') {
+				opts.body = JSON.stringify(opts.body);
+			} else {
+				reject({
+					code: 151050,
+					message: 'FETCH_INVALID_ARGUMENT',
+					details: 'Request body must be a string'
+				});
+				return;
+			}
+		}
+
+		opts = {
+			method: opts.method,
+			url: opts.url,
+			headers: opts.headers,
+			type: opts.type,
+			body: opts.body
+		};
+
+		if (_utils.isNative) {
+			stream.fetch(opts, function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					if (ret.ok && typeof ret.data === 'string') {
+						switch (opts.type) {
+							case 'json':
+								ret.data = JSON.parse(ret.data);
+								break;
+
+							case 'jsonp':
+								{
+									var matched = ret.data.match(/^\s*?.*\((.*)\)\s*?$/);
+									if (matched) {
+										ret.data = JSON.parse(matched[1]);
+									}
+									break;
+								}
+						}
+					}
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		} else {
+			var _url = opts.url;
+			delete opts.url;
+
+			var _res = {};
+
+			window.fetch(_url, opts).then(function (res) {
+				_res = res;
+
+				if (res.ok) {
+					if (res.status === 204) {
+						return null;
+					} else {
+						if (opts.type === 'json') {
+							return res.json();
+						} else {
+							return res.text();
+						}
+					}
+				} else {
+					throw new Error(res.statusText);
+				}
+			}).then(function (data) {
+				if (opts.type === 'jsonp') {
+					var matched = data.match(/^\s*?.*\((.*)\)\s*?$/);
+					if (matched) {
+						data = JSON.parse(matched[1]);
+					}
+				}
+
+				resolve({
+					data: data,
+					headers: _res.headers,
+					ok: _res.ok,
+					redirected: _res.redirected,
+					status: _res.status,
+					statusText: _res.statusText
+				});
+			}).catch(function (e) {
+				reject(e);
+				if (typeof cb === 'function') cb(e, null);
+			});
+		}
+	});
+};
+
+module.exports = {
+	fetch: Fetch
+};
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+	return typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+} : function (obj) {
+	return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+};
+
+var transfer = void 0;
+
+if (weex && weex.requireModule) {
+	transfer = weex.requireModule('nat/transfer');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		transfer = __weex_require__('@weex-module/nat/transfer');
+	});
+}
+
+// download
+
+var download = function download(url, opts, hooks, cb) {
+	return new Promise(function (resolve, reject) {
+		if (!url) {
+			reject({
+				code: 151040,
+				message: 'DOWNLOAD_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		if (typeof opts === 'function') {
+			cb = opts;
+		} else if ((typeof opts === 'undefined' ? 'undefined' : _typeof(opts)) === 'object') {
+			if (typeof hooks === 'function') {
+				cb = hooks;
+			}
+			// todo
+			if (typeof opts.onProgress === 'function') {
+				hooks = opts;
+			}
+		}
+
+		if ((typeof url === 'undefined' ? 'undefined' : _typeof(url)) === 'object') {
+			opts = url;
+		} else {
+			opts = opts || {};
+			opts.url = url;
+		}
+
+		// hooks
+		hooks = hooks || {};
+
+		transfer.download({
+			url: opts.url,
+			headers: opts.headers || {},
+			target: opts.target
+		}, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else if (ret.progress) {
+				if (typeof hooks.onProgress === 'function') {
+					hooks.onProgress(ret.progress);
+				}
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// upload
+
+var upload = function upload(url, opts, hooks, cb) {
+	return new Promise(function (resolve, reject) {
+		if (!url) {
+			reject({
+				code: 151040,
+				message: 'UPLOAD_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		if (typeof opts === 'function') {
+			cb = opts;
+		} else if ((typeof opts === 'undefined' ? 'undefined' : _typeof(opts)) === 'object') {
+			if (typeof hooks === 'function') {
+				cb = hooks;
+			}
+			// todo
+			if (typeof opts.onProgress === 'function') {
+				hooks = opts;
+			}
+		}
+
+		if ((typeof url === 'undefined' ? 'undefined' : _typeof(url)) === 'object') {
+			opts = url;
+		} else {
+			opts = opts || {};
+			opts.url = url;
+		}
+
+		// hooks
+		hooks = hooks || {};
+
+		// path
+		if (!opts.path) {
+			reject({
+				code: 151040,
+				message: 'UPLOAD_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		// method
+		opts.method = opts.method ? opts.method.toUpperCase() : 'POST';
+
+		if (['POST', 'PUT', 'PATCH'].indexOf(opts.method) < 0) {
+			reject({
+				code: 151050,
+				message: 'UPLOAD_INVALID_ARGUMENT',
+				details: 'Unsupported request method'
+			});
+			return;
+		}
+
+		transfer.upload({
+			url: opts.url,
+			method: opts.method,
+			path: opts.path,
+			name: opts.name,
+			headers: opts.headers || {},
+			formData: opts.formData || {},
+			mimeType: opts.mimeType
+		}, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else if (ret.progress) {
+				if (typeof hooks.onProgress === 'function') {
+					hooks.onProgress(ret.progress);
+				}
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	download: download,
+	upload: upload
+};
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _accelerometer = __webpack_require__(26);
+
+var _accelerometer2 = _interopRequireDefault(_accelerometer);
+
+var _compass = __webpack_require__(27);
+
+var _compass2 = _interopRequireDefault(_compass);
+
+function _interopRequireDefault(obj) {
+	return obj && obj.__esModule ? obj : { default: obj };
+}
+
+module.exports = {
+	accelerometer: _accelerometer2.default,
+	compass: _compass2.default
+};
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var accelerometer = void 0;
+
+if (weex && weex.requireModule) {
+	accelerometer = weex.requireModule('nat/sensor/accelerometer');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		accelerometer = __weex_require__('@weex-module/nat/sensor/accelerometer');
+	});
+}
+
+// get
+var get = function get(opts, cb) {
+	if (typeof opts === 'function') {
+		cb = opts;
+		opts = {};
+	}
+
+	return new Promise(function (resolve, reject) {
+		accelerometer.get(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// watch
+
+var watch = function watch(opts, cb) {
+	if (typeof opts === 'function') {
+		cb = opts;
+		opts = {};
+	}
+
+	return new Promise(function (resolve, reject) {
+		accelerometer.watch({
+			interval: opts.interval || 32
+		}, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// clear watch
+
+var clearWatch = function clearWatch(cb) {
+	return new Promise(function (resolve, reject) {
+		accelerometer.clearWatch(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	get: get,
+	watch: watch,
+	clearWatch: clearWatch
+};
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var compass = void 0;
+
+if (weex && weex.requireModule) {
+	compass = weex.requireModule('nat/sensor/compass');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		compass = __weex_require__('@weex-module/nat/sensor/compass');
+	});
+}
+
+// get
+var get = function get(opts, cb) {
+	if (typeof opts === 'function') {
+		cb = opts;
+		opts = {};
+	}
+
+	return new Promise(function (resolve, reject) {
+		compass.get(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// watch
+
+var watch = function watch(opts, cb) {
+	if (typeof opts === 'function') {
+		cb = opts;
+		opts = {};
+	}
+
+	return new Promise(function (resolve, reject) {
+		compass.watch({
+			interval: opts.interval || 32
+		}, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// clear watch
+
+var clearWatch = function clearWatch(cb) {
+	return new Promise(function (resolve, reject) {
+		compass.clearWatch(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	get: get,
+	watch: watch,
+	clearWatch: clearWatch
+};
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _info = __webpack_require__(29);
+
+var _info2 = _interopRequireDefault(_info);
+
+var _battery = __webpack_require__(30);
+
+var _battery2 = _interopRequireDefault(_battery);
+
+var _network = __webpack_require__(31);
+
+var _network2 = _interopRequireDefault(_network);
+
+var _screen = __webpack_require__(32);
+
+var _screen2 = _interopRequireDefault(_screen);
+
+var _vibration = __webpack_require__(33);
+
+var _vibration2 = _interopRequireDefault(_vibration);
+
+var _volume = __webpack_require__(34);
+
+var _volume2 = _interopRequireDefault(_volume);
+
+function _interopRequireDefault(obj) {
+	return obj && obj.__esModule ? obj : { default: obj };
+}
+
+module.exports = {
+	info: _info2.default,
+	battery: _battery2.default,
+	network: _network2.default,
+	screen: _screen2.default,
+	vibration: _vibration2.default,
+	volume: _volume2.default
+};
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var device = void 0;
+
+if (weex && weex.requireModule) {
+	device = weex.requireModule('nat/device/info');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		device = __weex_require__('@weex-module/nat/device/info');
+	});
+}
+
+// info
+
+var info = function info(cb) {
+	return new Promise(function (resolve, reject) {
+		device.info(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	info: info
+};
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var battery = void 0;
+
+if (weex && weex.requireModule) {
+	battery = weex.requireModule('nat/device/battery');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		battery = __weex_require__('@weex-module/nat/device/battery');
+	});
+}
+
+// status
+
+var status = function status(cb) {
+	return new Promise(function (resolve, reject) {
+		battery.status(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	status: status
+};
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var network = void 0;
+
+if (weex && weex.requireModule) {
+	network = weex.requireModule('nat/device/network');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		network = __weex_require__('@weex-module/nat/device/network');
+	});
+}
+
+// status
+
+var status = function status(cb) {
+	return new Promise(function (resolve, reject) {
+		network.status(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	status: status
+};
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var screen = void 0;
+
+if (weex && weex.requireModule) {
+	screen = weex.requireModule('nat/device/screen');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		screen = __weex_require__('@weex-module/nat/device/screen');
+	});
+}
+
+// brightness
+
+var brightness = {
+	get: function get(cb) {
+		return new Promise(function (resolve, reject) {
+			screen.getBrightness(function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		});
+	},
+
+	set: function set(brightness, cb) {
+		return new Promise(function (resolve, reject) {
+			screen.setBrightness(brightness, function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		});
+	}
+
+	// orientation
+
+};var orientation = {
+	status: function status(cb) {
+		return new Promise(function (resolve, reject) {
+			screen.getOrientation(function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		});
+	},
+
+	lock: function lock(orientation, cb) {
+		if (typeof orientation === 'function') {
+			cb = orientation;
+			orientation = {};
+		}
+
+		// orientation
+		if (['portrait-primary', 'portrait-secondary', 'landscape-primary', 'landscape-secondary', 'portrait', // either portrait-primary or portrait-secondary.
+		'landscape', // either landscape-primary or landscape-secondary.
+		'any' // All orientations are supported (unlocked orientation)
+		].indexOf(orientation) < 0) {
+			orientation = 'any';
+		}
+
+		return new Promise(function (resolve, reject) {
+			screen.lockOrientation(orientation, function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		});
+	},
+
+	unlock: function unlock(cb) {
+		return new Promise(function (resolve, reject) {
+			screen.unlockOrientation(function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		});
+	}
+
+	// info
+
+};var info = function info(cb) {
+	return new Promise(function (resolve, reject) {
+		screen.info(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	brightness: brightness,
+	orientation: orientation,
+	info: info
+};
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var vibration = void 0;
+
+if (weex && weex.requireModule) {
+	vibration = weex.requireModule('nat/device/vibration');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		vibration = __weex_require__('@weex-module/nat/device/vibration');
+	});
+}
+
+// vibrate
+
+var vibrate = function vibrate(time, cb) {
+	if (typeof time === 'function') {
+		cb = time;
+		time = {};
+	}
+
+	return new Promise(function (resolve, reject) {
+		vibration.vibrate(time || 500, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	vibrate: vibrate
+};
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var volume = void 0;
+
+if (weex && weex.requireModule) {
+	volume = weex.requireModule('nat/device/volume');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		volume = __weex_require__('@weex-module/nat/device/volume');
+	});
+}
+
+// get
+
+var get = function get(cb) {
+	return new Promise(function (resolve, reject) {
+		volume.get(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// set
+
+var set = function set(vol, cb) {
+	return new Promise(function (resolve, reject) {
+		volume.set(vol, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	get: get,
+	set: set
+};
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var navigator = void 0;
+
+if (weex && weex.requireModule) {
+	navigator = weex.requireModule('nat/navigator');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		navigator = __weex_require__('@weex-module/nat/navigator');
+	});
+}
+
+// push
+
+var push = function push(opts, cb) {
+	opts = opts || {};
+
+	if (typeof opts === 'string') {
+		opts = {
+			url: opts
+		};
+	}
+
+	return new Promise(function (resolve, reject) {
+		navigator.push(opts, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// pop
+var pop = function pop(opts, cb) {
+	return new Promise(function (resolve, reject) {
+		navigator.pop(opts, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// popToRoot
+var popToRoot = function popToRoot(opts, cb) {
+	opts = opts || {
+		animated: true
+	};
+
+	if (typeof opts === 'function') {
+		cb = opts;
+		opts = {
+			animated: true
+		};
+	}
+
+	return new Promise(function (resolve, reject) {
+		navigator.popToRoot(opts, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// setTitle
+var setTitle = function setTitle(opts, cb) {
+	opts = opts || {};
+
+	if (typeof opts === 'string') {
+		opts = {
+			title: opts
+		};
+	}
+
+	return new Promise(function (resolve, reject) {
+		navigator.setTitle(opts, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// setColor
+var setColor = function setColor(opts, cb) {
+	opts = opts || {};
+
+	if (typeof opts === 'string') {
+		opts = {
+			color: opts
+		};
+	}
+
+	return new Promise(function (resolve, reject) {
+		navigator.setColor(opts, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// setBackgroundColor
+var setBackgroundColor = function setBackgroundColor(opts, cb) {
+	opts = opts || {};
+
+	if (typeof opts === 'string') {
+		opts = {
+			backgroundColor: opts
+		};
+	}
+
+	return new Promise(function (resolve, reject) {
+		navigator.setBackgroundColor(opts, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// setFontSize
+var setFontSize = function setFontSize(opts, cb) {
+	opts = opts || {};
+
+	if (typeof opts === 'string' || typeof opts === 'number') {
+		opts = {
+			fontSize: opts
+		};
+	}
+
+	return new Promise(function (resolve, reject) {
+		navigator.setFontSize(opts, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// init
+var init = function init(opts, cb) {
+	opts = opts || {};
+
+	return new Promise(function (resolve, reject) {
+		navigator.init(opts, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// hide
+var hide = function hide(cb) {
+	return new Promise(function (resolve, reject) {
+		navigator.hide(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// show
+var show = function show(cb) {
+	return new Promise(function (resolve, reject) {
+		navigator.show(function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	push: push,
+	pop: pop,
+	popToRoot: popToRoot,
+	setTitle: setTitle,
+	setColor: setColor,
+	setBackgroundColor: setBackgroundColor,
+	setFontSize: setFontSize,
+	init: init,
+	hide: hide,
+	show: show
+};
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var alipay = void 0;
+
+if (weex && weex.requireModule) {
+	alipay = weex.requireModule('nat/alipay');
+} else if (typeof __weex_define__ === 'function') {
+	__weex_define__('@weex-temp/x', function (__weex_require__) {
+		alipay = __weex_require__('@weex-module/nat/alipay');
+	});
+}
+
+// pay
+
+var pay = function pay(params, cb) {
+	return new Promise(function (resolve, reject) {
+		if (!params) {
+			reject({
+				code: 201040,
+				message: 'PAY_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		params = params || {};
+
+		if (!params.info) {
+			reject({
+				code: 201040,
+				message: 'PAY_MISSING_ARGUMENT',
+				details: '[params.info] is required'
+			});
+			return;
+		}
+
+		if (!params.scheme) {
+			reject({
+				code: 201040,
+				message: 'PAY_MISSING_ARGUMENT',
+				details: '[params.scheme] is required'
+			});
+			return;
+		}
+
+		alipay.pay(params, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				switch (ret.error.code) {
+					case '8000':
+						ret.error.msg = '正在处理中，支付结果未知';
+						break;
+
+					case '4000':
+						ret.error.msg = '订单支付失败';
+						break;
+
+					case '5000':
+						ret.error.msg = '重复请求';
+						break;
+
+					case '6001':
+						ret.error.msg = '用户中途取消';
+						break;
+
+					case '6002':
+						ret.error.msg = '网络连接出错';
+						break;
+
+					case '6004':
+						ret.error.msg = '支付结果未知';
+						break;
+				}
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+// auth
+
+var auth = function auth(params, cb) {
+	return new Promise(function (resolve, reject) {
+		if (!params) {
+			reject({
+				code: 201040,
+				message: 'PAY_MISSING_ARGUMENT'
+			});
+			return;
+		}
+
+		params = params || {};
+
+		if (!params.info) {
+			reject({
+				code: 201040,
+				message: 'PAY_MISSING_ARGUMENT',
+				details: '[params.info] is required'
+			});
+			return;
+		}
+
+		if (!params.scheme) {
+			reject({
+				code: 201040,
+				message: 'PAY_MISSING_ARGUMENT',
+				details: '[params.scheme] is required'
+			});
+			return;
+		}
+
+		alipay.auth(params, function (ret) {
+			ret = ret || {};
+
+			if (ret.error) {
+				reject(ret.error);
+				if (typeof cb === 'function') cb(ret.error, null);
+			} else {
+				resolve(ret);
+				if (typeof cb === 'function') cb(null, ret);
+			}
+		});
+	});
+};
+
+module.exports = {
+	pay: pay,
+	auth: auth
+};
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var SHARE_TYPES = {
+	'app': 1,
+	'emotion': 2,
+	'file': 3,
+	'image': 4,
+	'music': 5,
+	'video': 6,
+	'webpage': 7,
+	'link': 7,
+	'mini-program': 8
+};
+
+var SCENE_TYPES = {
+	'session': 0,
+	'timeline': 1,
+	'favorite': 2
+};
+
+var __c = void 0;
+
+var wechat = {
+	get wechatModule() {
+		if (__c) {
+			return __c;
+		} else if (weex && weex.requireModule) {
+			__c = weex.requireModule('nat/wechat');
+			return __c;
+		}
+	},
+
+	// init
+	init: function init(appId, cb) {
+		var _this = this;
+
+		return new Promise(function (resolve, reject) {
+			if (!appId) {
+				reject({
+					code: 301040,
+					message: 'MISSING_ARGUMENT',
+					details: 'appId is required'
+				});
+				return;
+			}
+
+			_this.wechatModule.init(appId, function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		});
+	},
+
+	// checkInstalled
+	checkInstalled: function checkInstalled(cb) {
+		var _this2 = this;
+
+		return new Promise(function (resolve, reject) {
+			_this2.wechatModule.checkInstalled(function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		});
+	},
+
+	/**
+ 	share
+ 		@params
+ 	- content
+ 		- title
+ 		- description (desc)
+ 		- type
+ 		- filePath
+ 		- thumbUrl
+ 		- dataUrl
+ 		- link
+ 	- scene
+  */
+	share: function share(params, cb) {
+		var _this3 = this;
+
+		return new Promise(function (resolve, reject) {
+			if (!params) {
+				reject({
+					code: 301040,
+					message: 'SHARE_MISSING_ARGUMENT'
+				});
+				return;
+			}
+
+			params = params || {};
+
+			if (typeof params.scene === 'string') {
+				params.scene = SCENE_TYPES[params.scene] || 0;
+			} else {
+				params.scene = params.scene || 0;
+			}
+
+			if (typeof params.content === 'string') {
+				params.text = params.content;
+				delete params.content;
+			} else {
+				var type = 0;
+				params.content = params.content || {};
+
+				if (!params.content.description && params.content.desc) {
+					params.content.description = params.content.desc;
+				}
+
+				if (typeof params.content.type === 'string') {
+					type = SHARE_TYPES[params.content.type];
+					params.content.type = type;
+
+					if (!type) {
+						reject({
+							code: 301041,
+							message: 'SHARE_ARGUMENT_ERROR',
+							details: 'unsupported share content type'
+						});
+						return;
+					}
+				}
+
+				// app & file
+				// filePath: local only
+				if ([1, 3].includes(type) && !params.content.filePath) {
+					reject({
+						code: 301041,
+						message: 'SHARE_ARGUMENT_ERROR',
+						details: 'content.filePath is required'
+					});
+					return;
+				}
+				// emotion & image & music & video
+				else if ([2, 4, 5, 6].includes(type) && !params.content.dataUrl) {
+						reject({
+							code: 301041,
+							message: 'SHARE_ARGUMENT_ERROR',
+							details: 'content.dataUrl is required'
+						});
+						return;
+					}
+
+				// add link (music & webpage)
+				if ([5, 7].includes(type) && !params.content.link) {
+					reject({
+						code: 301041,
+						message: 'SHARE_ARGUMENT_ERROR',
+						details: 'content.link is required'
+					});
+					return;
+				}
+			}
+
+			_this3.wechatModule.share(params, function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					delete ret.status;
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		});
+	},
+
+	// pay
+	pay: function pay(params, cb) {
+		var _this4 = this;
+
+		return new Promise(function (resolve, reject) {
+			if (!params) {
+				reject({
+					code: 301040,
+					message: 'PAY_MISSING_ARGUMENT'
+				});
+				return;
+			}
+
+			// if (!params.appid) {
+			// 	reject({
+			// 		code: 301040,
+			// 		message: 'PAY_MISSING_ARGUMENT',
+			// 		details: '[params.appid] is required'
+			// 	})
+			// 	return
+			// }
+
+			_this4.wechatModule.pay(params, function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					delete ret.status;
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		});
+	},
+
+	// auth
+	auth: function auth(params, cb) {
+		var _this5 = this;
+
+		return new Promise(function (resolve, reject) {
+			if (!params) {
+				reject({
+					code: 301040,
+					message: 'PAY_MISSING_ARGUMENT'
+				});
+				return;
+			}
+
+			params = params || {};
+
+			if (!params.info) {
+				reject({
+					code: 301040,
+					message: 'PAY_MISSING_ARGUMENT',
+					details: '[params.info] is required'
+				});
+				return;
+			}
+
+			_this5.wechatModule.auth(params, function (ret) {
+				ret = ret || {};
+
+				if (ret.error) {
+					reject(ret.error);
+					if (typeof cb === 'function') cb(ret.error, null);
+				} else {
+					delete ret.status;
+					resolve(ret);
+					if (typeof cb === 'function') cb(null, ret);
+				}
+			});
+		});
+	}
+};
+
+module.exports = wechat;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(6)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(7)
+
+/* template */
+var __vue_template__ = __webpack_require__(8)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/acathur/Developments/nat/nat-explorer/src/layout/nav-bar.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-0eab8d25"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(9)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(10)
+
+/* template */
+var __vue_template__ = __webpack_require__(11)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/acathur/Developments/nat/nat-explorer/src/layout/title-bar.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-f37e2f4c"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(66)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(67)
+
+/* template */
+var __vue_template__ = __webpack_require__(68)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "/Users/acathur/Developments/nat/nat-explorer/src/views/communication/mail.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-4888fa72"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+module.exports.el = 'true'
+new Vue(module.exports)
+
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "bottom-line": {
+    "borderBottomWidth": "1",
+    "borderBottomStyle": "solid",
+    "borderBottomColor": "#dddddd"
+  },
+  "button": {
+    "backgroundImage": "linear-gradient(to bottom, #3D83FB, #3370FF)",
+    "height": "84",
+    "paddingLeft": "64",
+    "paddingRight": "64",
+    "borderRadius": "42",
+    "borderWidth": 0,
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "button-txt": {
+    "fontSize": "32",
+    "fontWeight": "600",
+    "color": "#ffffff"
+  },
+  "content": {
+    "paddingLeft": "48",
+    "paddingRight": "48"
+  },
+  "case": {
+    "marginBottom": "36"
+  },
+  "header": {
+    "height": "94",
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "dot": {
+    "backgroundColor": "#3D83FB",
+    "width": "16",
+    "height": "16",
+    "borderRadius": "8",
+    "marginRight": "16"
+  },
+  "title": {
+    "fontSize": "32",
+    "fontWeight": "700"
+  },
+  "code": {
+    "fontSize": "24",
+    "color": "#555555",
+    "backgroundColor": "#f7f7f7",
+    "borderRadius": "8",
+    "paddingLeft": "36",
+    "paddingRight": "36",
+    "paddingTop": "32",
+    "paddingBottom": "32",
+    "width": "654"
+  }
+}
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _natjs = __webpack_require__(12);
+
+var _natjs2 = _interopRequireDefault(_natjs);
+
+var _statusBar = __webpack_require__(5);
+
+var _statusBar2 = _interopRequireDefault(_statusBar);
+
+var _navBar = __webpack_require__(38);
+
+var _navBar2 = _interopRequireDefault(_navBar);
+
+var _titleBar = __webpack_require__(39);
+
+var _titleBar2 = _interopRequireDefault(_titleBar);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+	name: 'mail',
+
+	data: function data() {
+		return {
+			name: 'Mail'
+		};
+	},
+
+
+	components: {
+		StatusBar: _statusBar2.default,
+		NavBar: _navBar2.default,
+		TitleBar: _titleBar2.default
+	},
+
+	methods: {
+		mail: function mail() {
+			_natjs2.default.mail('hi@natjs.com');
+		},
+		mailMulti: function mailMulti() {
+			_natjs2.default.mail(['hi@natjs.com', 'push@natjs.com']);
+		},
+		callWithContnCb: function callWithContnCb() {
+			_natjs2.default.mail('hi@natjs.com', {
+				subject: 'Subject',
+				body: 'content goes here.'
+			}, function () {
+				_natjs2.default.toast('email popup');
+			});
+		}
+	}
+};
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('status-bar'), _c('nav-bar'), _c('scroller', {
+    staticClass: ["content"],
+    attrs: {
+      "showScrollbar": false
+    }
+  }, [_c('title-bar', {
+    attrs: {
+      "title": _vm.name
+    }
+  }), _c('div', {
+    staticClass: ["case"],
+    on: {
+      "click": _vm.mail
+    }
+  }, [_vm._m(0), _c('text', {
+    staticClass: ["code"]
+  }, [_vm._v("Nat.mail('hi@natjs.com')")])]), _c('div', {
+    staticClass: ["case"],
+    on: {
+      "click": _vm.mailMulti
+    }
+  }, [_vm._m(1), _c('text', {
+    staticClass: ["code"]
+  }, [_vm._v("Nat.mail(['hi@natjs.com', 'push@natjs.com'])")])]), _c('div', {
+    staticClass: ["case"],
+    on: {
+      "click": _vm.callWithContnCb
+    }
+  }, [_vm._m(2), _c('text', {
+    staticClass: ["code"]
+  }, [_vm._v("Nat.mail('hi@natjs.com', {\n\tsubject: 'Subject',\n\tbody: 'content goes here.'\n}, () => {\n\tNat.toast('email popup')\n})")])])], 1)], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["header"]
+  }, [_c('div', {
+    staticClass: ["dot"]
+  }), _c('text', {
+    staticClass: ["title"]
+  }, [_vm._v("Simple Mail")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["header"]
+  }, [_c('div', {
+    staticClass: ["dot"]
+  }), _c('text', {
+    staticClass: ["title"]
+  }, [_vm._v("Multiple recipients")])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["header"]
+  }, [_c('div', {
+    staticClass: ["dot"]
+  }), _c('text', {
+    staticClass: ["title"]
+  }, [_vm._v("Mail with content and callback")])])
+}]}
+module.exports.render._withStripped = true
+
+/***/ })
+/******/ ]);

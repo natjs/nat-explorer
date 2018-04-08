@@ -1,6 +1,7 @@
 ## JS
 node_modules/
 temp/
+.temp/
 
 
 ## Android Studio

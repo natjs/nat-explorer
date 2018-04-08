@@ -1,7 +1,7 @@
 <template lang="pug">
 	div.module
-		text.title {{ name }}
-		.cell(v-for="func in functions", @click="push(func.path)")
+		text.title.bottom-line {{ name }}
+		.cell.bottom-line(v-for="func in functions", @click="push(func.path)")
 			text.name {{ func.name }}
 			image.arrow(:src="cdnUri + 'arrow.png'")
 </template>
@@ -52,16 +52,14 @@ export default {
 }
 
 .title {
-	.c-ink;
-	.fz-32;
-	.bottom-line;
+	color: @ink;
+	font-size: @font-size-base;
 	font-weight: 200;
 	padding-top: 8px;
 	padding-bottom: 20px;
 }
 
 .cell {
-	.bottom-line;
 	height: 84px;
 	padding-left: 24px;
 	padding-right: 12px;
@@ -76,8 +74,8 @@ export default {
 }
 
 .name {
-	.c-ink;
-	.fz-32;
+	color: @ink;
+	font-size: @font-size-base;
 	font-weight: 700;
 }
 </style>

@@ -1,0 +1,128 @@
+[
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-camera",
+    "version": "1.0.2",
+    "dependency": "com.instapp.nat:weex-plugin-camera:1.0.2"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-communication",
+    "version": "1.0.1",
+    "dependency": "com.instapp.nat:weex-plugin-communication:1.0.1"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-device-battery",
+    "version": "1.0.0-alpha",
+    "dependency": "com.instapp.nat:weex-plugin-device-battery:1.0.0-alpha"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-device-info",
+    "version": "1.0.0-alpha",
+    "dependency": "com.instapp.nat:weex-plugin-device-info:1.0.0-alpha"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-device-network",
+    "version": "1.0.0-alpha.1",
+    "dependency": "com.instapp.nat:weex-plugin-device-network:1.0.0-alpha.1"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-device-screen",
+    "version": "1.0.0-alpha.1",
+    "dependency": "com.instapp.nat:weex-plugin-device-screen:1.0.0-alpha.1"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-device-vibration",
+    "version": "1.0.0-alpha.1",
+    "dependency": "com.instapp.nat:weex-plugin-device-vibration:1.0.0-alpha.1"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-device-volume",
+    "version": "1.0.0-alpha",
+    "dependency": "com.instapp.nat:weex-plugin-device-volume:1.0.0-alpha"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-geolocation",
+    "version": "1.0.1",
+    "dependency": "com.instapp.nat:weex-plugin-geolocation:1.0.1"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-media-audio",
+    "version": "1.0.0-alpha",
+    "dependency": "com.instapp.nat:weex-plugin-media-audio:1.0.0-alpha"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-media-image",
+    "version": "1.0.1",
+    "dependency": "com.instapp.nat:weex-plugin-media-image:1.0.1"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-media-video",
+    "version": "1.0.0-alpha",
+    "dependency": "com.instapp.nat:weex-plugin-media-video:1.0.0-alpha"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-modal",
+    "version": "1.0.1-alpha",
+    "dependency": "com.instapp.nat:weex-plugin-modal:1.0.1-alpha"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-recorder",
+    "version": "1.0.1",
+    "dependency": "com.instapp.nat:weex-plugin-recorder:1.0.1"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-sensor-accelerometer",
+    "version": "1.0.0-alpha",
+    "dependency": "com.instapp.nat:weex-plugin-sensor-accelerometer:1.0.0-alpha"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-sensor-compass",
+    "version": "1.0.0-alpha",
+    "dependency": "com.instapp.nat:weex-plugin-sensor-compass:1.0.0-alpha"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-stream",
+    "version": "1.0.0-alpha",
+    "dependency": "com.instapp.nat:weex-plugin-stream:1.0.0-alpha"
+  },
+  {
+    "type": "maven",
+    "groupId": "com.instapp.nat",
+    "name": "weex-plugin-transfer",
+    "version": "1.0.0-alpha",
+    "dependency": "com.instapp.nat:weex-plugin-transfer:1.0.0-alpha"
+  }
+]

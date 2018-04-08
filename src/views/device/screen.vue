@@ -85,36 +85,66 @@ export default {
 	methods: {
 		getScreenInfo() {
 			Nat.screen.info((err, ret) => {
+				if (err) {
+					Nat.toast('[ERROR] ' + JSON.stringify(err))
+					return
+				}
+
 				Nat.toast(JSON.stringify(ret, null, 2))
 			})
 		},
 
 		getBrightness() {
 			Nat.screen.brightness.get((err, ret) => {
+				if (err) {
+					Nat.toast('[ERROR] ' + JSON.stringify(err))
+					return
+				}
+
 				Nat.toast(JSON.stringify(ret))
 			})
 		},
 
 		setBrightness() {
 			Nat.screen.brightness.set(1, (err, ret) => {
+				if (err) {
+					Nat.toast('[ERROR] ' + JSON.stringify(err))
+					return
+				}
+
 				Nat.toast(JSON.stringify(ret))
 			})
 		},
 
 		getOrientation() {
 			Nat.screen.orientation.status((err, ret) => {
+				if (err) {
+					Nat.toast('[ERROR] ' + JSON.stringify(err))
+					return
+				}
+
 				Nat.toast(JSON.stringify(ret))
 			})
 		},
 
 		lockScreenOrientation() {
 			Nat.screen.orientation.lock((err, ret) => {
+				if (err) {
+					Nat.toast('[ERROR] ' + JSON.stringify(err))
+					return
+				}
+
 				Nat.toast(JSON.stringify(ret))
 			})
 		},
 
 		unlockScreenOrientation() {
 			Nat.screen.orientation.unlock((err, ret) => {
+				if (err) {
+					Nat.toast('[ERROR] ' + JSON.stringify(err))
+					return
+				}
+
 				Nat.toast(JSON.stringify(ret))
 			})
 		}

@@ -11,9 +11,8 @@
 #import "ApiKey.h"
 #import <WeexSDK/WeexSDK.h>
 #import <AVFoundation/AVFoundation.h>
-#import <ATSDK/ATManager.h>
-#import "WeexSDKManager.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import "WeexSDKManager.h"
 
 @interface AppDelegate ()
 @end
@@ -29,7 +28,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     [WeexSDKManager setup];
-    
+
     // leancloud
     [AVOSCloud setServiceRegion:AVServiceRegionUS];
     [AVOSCloud setApplicationId:LC_APPID clientKey:LC_APPKEY];
@@ -37,33 +36,19 @@
     
     [self.window makeKeyAndVisible];
     
+    // Override point for customization after application launch.
+    [self startSplashScreen];
+    
     return YES;
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
+#pragma mark 
+#pragma mark animation when startup
+
+- (void)startSplashScreen
 {
-    
-#ifdef UITEST
-#if !TARGET_IPHONE_SIMULATOR
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    setenv("GCOV_PREFIX", [documentsDirectory cStringUsingEncoding:NSUTF8StringEncoding], 1);
-    setenv("GCOV_PREFIX_STRIP", "6", 1);
-#endif
-    extern void __gcov_flush(void);
-    __gcov_flush();
-#endif
-}
-
-#pragma mark
-
-- (void)atAddPlugin {
-    
-    [[ATManager shareInstance] addPluginWithId:@"weex" andName:@"weex" andIconName:@"../weex" andEntry:@"" andArgs:@[@""]];
-    [[ATManager shareInstance] addSubPluginWithParentId:@"weex" andSubId:@"logger" andName:@"logger" andIconName:@"log" andEntry:@"WXATLoggerPlugin" andArgs:@[@""]];
-//    [[ATManager shareInstance] addSubPluginWithParentId:@"weex" andSubId:@"viewHierarchy" andName:@"hierarchy" andIconName:@"log" andEntry:@"WXATViewHierarchyPlugin" andArgs:@[@""]];
-    [[ATManager shareInstance] addSubPluginWithParentId:@"weex" andSubId:@"test2" andName:@"test" andIconName:@"at_arr_refresh" andEntry:@"" andArgs:@[]];
-    [[ATManager shareInstance] addSubPluginWithParentId:@"weex" andSubId:@"test3" andName:@"test" andIconName:@"at_arr_refresh" andEntry:@"" andArgs:@[]];
+    UIView* splashView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    splashView.backgroundColor = [UIColor whiteColor];
 }
 
 @end

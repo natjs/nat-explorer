@@ -15,8 +15,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.instapp.natex.commons.AbsWeexActivity;
-import com.instapp.natex.constants.Constants;
+import com.instapp.natex.hotreload.HotReloadManager;
+import com.instapp.natex.util.AppConfig;
+import com.instapp.natex.util.Constants;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 import com.taobao.weex.WXEnvironment;
@@ -24,7 +25,11 @@ import com.taobao.weex.WXRenderErrorCode;
 import com.taobao.weex.WXSDKEngine;
 import com.taobao.weex.WXSDKInstance;
 import com.taobao.weex.ui.component.NestedContainer;
+import com.taobao.weex.utils.WXLogUtils;
 import com.taobao.weex.utils.WXSoInstallMgrSdk;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 public class WXPageActivity extends AbsWeexActivity implements
@@ -33,6 +38,8 @@ public class WXPageActivity extends AbsWeexActivity implements
   private static final String TAG = "WXPageActivity";
   private ProgressBar mProgressBar;
   private TextView mTipView;
+  private boolean mFromSplash = false;
+  private HotReloadManager mHotReloadManager;
 
   @Override
   public void onCreateNestInstance(WXSDKInstance instance, NestedContainer container) {
@@ -47,26 +54,66 @@ public class WXPageActivity extends AbsWeexActivity implements
     mProgressBar = (ProgressBar) findViewById(R.id.progress);
     mTipView = (TextView) findViewById(R.id.index_tip);
 
-    Uri uri = getIntent().getData();
-    Bundle bundle = getIntent().getExtras();
+    Intent intent = getIntent();
+    Uri uri = intent.getData();
+    String from = intent.getStringExtra("from");
+    mFromSplash = "splash".equals(from);
 
-    if (uri != null) {
-      mUri = uri;
+    if (uri == null) {
+      uri = Uri.parse("{}");
     }
+    if (uri != null) {
+      String sUrl = uri.toString();
 
-    if (bundle != null) {
-      String bundleUrl = bundle.getString(Constants.PARAM_BUNDLE_URL);
-      if (!TextUtils.isEmpty(bundleUrl)) {
-        mUri = Uri.parse(bundleUrl);
+      if (sUrl.startsWith("file://")) {
+        mUri = uri;
+      } else {
+        try {
+          JSONObject initData = new JSONObject(uri.toString());
+          String bundleUrl = initData.optString("WeexBundle", null);
+          if (bundleUrl != null) {
+            mUri = Uri.parse(bundleUrl);
+          }
+
+          String ws = initData.optString("Ws", null);
+          if (!TextUtils.isEmpty(ws)) {
+            mHotReloadManager = new HotReloadManager(ws, new HotReloadManager.ActionListener() {
+              @Override
+              public void reload() {
+                runOnUiThread(new Runnable() {
+                  @Override
+                  public void run() {
+                    Toast.makeText(WXPageActivity.this, "Hot reload", Toast.LENGTH_SHORT).show();
+                    createWeexInstance();
+                    renderPage();
+                  }
+                });
+              }
+
+              @Override
+              public void render(final String bundleUrl) {
+                runOnUiThread(new Runnable() {
+                  @Override
+                  public void run() {
+                    Toast.makeText(WXPageActivity.this, "Render: " + bundleUrl, Toast.LENGTH_SHORT).show();
+                    createWeexInstance();
+                    loadUrl(bundleUrl);
+                  }
+                });
+              }
+            });
+          } else {
+            WXLogUtils.w("Weex", "can not get hot reload config");
+          }
+        } catch (JSONException e) {
+          e.printStackTrace();
+        }
       }
     }
 
     if (mUri == null) {
-      Toast.makeText(this, "the uri is empty!", Toast.LENGTH_SHORT).show();
-      finish();
-      return;
+      mUri = Uri.parse(AppConfig.getLaunchUrl());
     }
-
 
     if (!WXSoInstallMgrSdk.isCPUSupport()) {
       mProgressBar.setVisibility(View.INVISIBLE);
@@ -74,17 +121,12 @@ public class WXPageActivity extends AbsWeexActivity implements
       return;
     }
 
-    loadUrl(getUrl(mUri));
-  }
-
-  @Override
-  public void onResume() {
-    super.onResume();
-  }
-
-  @Override
-  public void onPause() {
-    super.onPause();
+    String url = getUrl(mUri);
+    if (getSupportActionBar() != null) {
+      getSupportActionBar().setTitle(url);
+      getSupportActionBar().hide();
+    }
+    loadUrl(url);
   }
 
   private String getUrl(Uri uri) {
@@ -126,7 +168,8 @@ public class WXPageActivity extends AbsWeexActivity implements
   public void onException(WXSDKInstance instance, String errCode, String msg) {
     mProgressBar.setVisibility(View.GONE);
     mTipView.setVisibility(View.VISIBLE);
-    if (TextUtils.equals(errCode, WXRenderErrorCode.WX_NETWORK_ERROR)) {
+//    if (TextUtils.equals(errCode, WXRenderErrorCode.WX_NETWORK_ERROR)) {
+    if (TextUtils.equals(errCode, WXRenderErrorCode.DegradPassivityCode.WX_DEGRAD_ERR_NETWORK_BUNDLE_DOWNLOAD_FAILED.toString())) {
       mTipView.setText(R.string.index_tip);
     } else {
       mTipView.setText("render error:" + errCode);
@@ -135,7 +178,7 @@ public class WXPageActivity extends AbsWeexActivity implements
 
   @Override
   public boolean onCreateOptionsMenu(Menu menu) {
-    getMenuInflater().inflate(isLocalPage() ? R.menu.main_scan : R.menu.main, menu);
+    getMenuInflater().inflate(mFromSplash ? R.menu.main_scan : R.menu.main, menu);
     return super.onCreateOptionsMenu(menu);
   }
 
@@ -200,14 +243,19 @@ public class WXPageActivity extends AbsWeexActivity implements
       } else if (code.contains("_wx_debug")) {
         uri = Uri.parse(code);
         String debug_url = uri.getQueryParameter("_wx_debug");
-        WXSDKEngine.switchDebugModel(true, debug_url);
+//        WXSDKEngine.switchDebugModel(true, debug_url);
+        WXSDKEngine.restartBridge(true);
         finish();
       } else {
-        Toast.makeText(this, code, Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(Constants.ACTION_OPEN_URL);
-        intent.setPackage(getPackageName());
-        intent.setData(Uri.parse(code));
-        startActivity(intent);
+        JSONObject data = new JSONObject();
+        try {
+          data.put("WeexBundle", Uri.parse(code).toString());
+          Intent intent = new Intent(WXPageActivity.this, WXPageActivity.class);
+          intent.setData(Uri.parse(data.toString()));
+          startActivity(intent);
+        } catch (JSONException e) {
+          e.printStackTrace();
+        }
       }
     }
   }
@@ -215,5 +263,8 @@ public class WXPageActivity extends AbsWeexActivity implements
   @Override
   public void onDestroy() {
     super.onDestroy();
+    if (mHotReloadManager != null) {
+      mHotReloadManager.destroy();
+    }
   }
 }

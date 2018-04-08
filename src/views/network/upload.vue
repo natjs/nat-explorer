@@ -124,13 +124,13 @@ export default {
 
 		pick() {
 			Nat.image.pick()
-			.then(ret => {
-				this.filePath = ret.paths[0]
-				Nat.toast('picked: ' + this.filePath)
-			})
-			.catch(err => {
-				Nat.toast('[ERROR] ' + JSON.stringify(err))
-			})
+				.then((ret) => {
+					this.filePath = ret.paths[0]
+					Nat.toast('picked: ' + this.filePath)
+				})
+				.catch((err) => {
+					Nat.toast('[ERROR] ' + JSON.stringify(err))
+				})
 		}
 	}
 }

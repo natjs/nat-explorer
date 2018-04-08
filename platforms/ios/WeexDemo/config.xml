@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.taobao.WeexDemo" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://*">
-    <name>WeexDemo</name>
+<widget id="com.instapp.natex" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://*">
+    <name>NatExplorer</name>
     <description>
-        A sample Weex application that responds to the deviceready event.
+        Nat Explorer is a nat example app, help you explore Nat modules instantly.
     </description>
-    <author email=" " href="https://alibaba.github.io/weex/">
-        Weex Team
+    <author email="dev@instapp.io" href="http://natjs.com/">
+        Instapp
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -30,7 +30,7 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
-    <preference name="launch_locally" value="ture" />
+    <preference name="launch_locally" value="true" />
     <preference name="launch_url" value=""/>
     <preference name="local_url" value="index.js" />
 </widget>

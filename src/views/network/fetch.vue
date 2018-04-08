@@ -25,7 +25,7 @@
 					text.title Fetch with options
 				text.code
 					| Nat.fetch(this.url, {
-					| 	method: 'PATCH',
+					| 	method: 'PUT',
 					| 	type: 'json'
 					| }, (err, res) => {
 					| 	if (err) {
@@ -74,7 +74,7 @@ export default {
 
 		fetchWithOpts() {
 			Nat.fetch(this.url, {
-				method: 'PATCH',
+				method: 'PUT',
 				type: 'json'
 			}, (err, res) => {
 				if (err) {

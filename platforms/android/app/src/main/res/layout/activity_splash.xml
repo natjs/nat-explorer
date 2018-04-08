@@ -3,16 +3,17 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:id="@+id/container"
-             android:background="#ffffff"
+             android:background="@color/white"
              tools:context="com.instapp.natex.SplashActivity">
 
     <TextView android:id="@+id/fullscreen_content"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:keepScreenOn="true"
-              android:textColor="#FFFFFF"
-              android:textStyle="bold"
-              android:textSize="50sp"
-              android:gravity="center"
+              android:textColor="@color/ink"
+              android:textStyle="italic|bold"
+              android:textSize="22sp"
+              android:gravity="bottom|center"
+              android:layout_marginBottom="24dp"
               android:text="@string/dummy_content"/>
 </FrameLayout>

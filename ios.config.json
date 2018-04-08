@@ -1,9 +1,9 @@
 {
-    "AppName": "NatExample",
-    "Version": "0.1",
-    "BuildVersion": "0.1.0",
-    "AppId": "",
-    "CodeSign": "",
-    "Profile": "",
-    "WeexBundle": "index.js"
+   "AppName":"Nat Explorer",
+   "Version":"1.1.0",
+   "BuildVersion":"7",
+   "AppId":"com.instapp.natex",
+   "CodeSign":"",
+   "Profile":"",
+   "WeexBundle":"index.js"
 }
